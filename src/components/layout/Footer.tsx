@@ -280,18 +280,6 @@ export const Footer: React.FC = () => {
             </svg>
           </a>
           <a
-            href="https://www.youtube.com/@a3cend"
-            target="_blank"
-            rel="noreferrer"
-            className="a3-focusable flex items-center justify-center w-10 h-10 rounded-full bg-brand-600 text-white hover:brightness-110 transition-all"
-            aria-label="YouTube"
-          >
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <rect x="2.5" y="6" width="19" height="12" rx="3" />
-              <path d="M10.5 9.5v5l4.5-2.5z" fill="currentColor" stroke="none" />
-            </svg>
-          </a>
-          <a
             href="mailto:nirmalya.sengupta@a3cend.com"
             className="a3-focusable flex items-center justify-center w-10 h-10 rounded-full bg-brand-600 text-white hover:brightness-110 transition-all"
             aria-label="Email"
