@@ -1,0 +1,2100 @@
+/* ==========================================================================
+   A3CEND — Shared Visual System & AI Platform Aesthetics
+   Brand Color Tokens:
+   - brand-600: #008196  | brand-500: #00a0bb  | brand-400: #04aac4
+   - brand-100: #e3f5f8  | coral-500: #fa6793  | coral-700: #e04f7f
+   - ink-900:   #0c1216  | ink-400:   #93a2a9
+   ========================================================================== */
+
+:root {
+  /* Official Brand Tokens */
+  --brand-600: #008196;
+  --brand-500: #00a0bb;
+  --brand-400: #04aac4;
+  --brand-100: #e3f5f8;
+  --coral-500: #ff4081;
+  --coral-700: #e91e63;
+  --ink-900: #0c1216;
+  --ink-400: #93a2a9;
+
+  /* Aliases & Semantic Tokens */
+  --a3-teal-900: #003c46;
+  --a3-teal-700: #004a56;
+  --a3-teal-600: var(--brand-600);
+  --a3-teal-500: var(--brand-500);
+  --a3-cyan-400: var(--brand-400);
+  --a3-cyan-100: var(--brand-100);
+  --a3-cyan-50: #f1fafb;
+  --a3-pink-600: var(--coral-700);
+  --a3-pink-500: var(--coral-500);
+  --a3-pink-100: #ffdbe5;
+  --a3-pink-50: #fff0f4;
+  --a3-purple-500: var(--brand-600);
+  --a3-purple-100: var(--brand-100);
+  --a3-green-500: #17b978;
+  --a3-green-100: #dcf6e9;
+  --a3-blue-500: #3b6fe0;
+  --a3-blue-100: #e6edfd;
+
+  /* Neutrals */
+  --a3-ink: var(--ink-900);
+  --a3-slate-700: #2f3a40;
+  --a3-slate-600: #47555d;
+  --a3-slate-400: #657680;
+  --a3-slate-300: var(--ink-400);
+  --a3-line: #dde4e8;
+  --a3-line-soft: #eef2f4;
+  --a3-surface: #f7f9fa;
+  --a3-white: #ffffff;
+
+  /* Brand Gradients */
+  --a3-grad-hero: linear-gradient(160deg, #003c46 0%, var(--brand-600) 50%, var(--brand-400) 100%);
+  --a3-grad-iridescent: linear-gradient(135deg, #eef9fb 0%, #f4efff 35%, #fff4f7 70%, #eef9fb 100%);
+  --a3-grad-brand: linear-gradient(135deg, var(--brand-400) 0%, var(--brand-600) 50%, var(--coral-500) 100%);
+  --a3-grad-cta: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-400) 40%, var(--coral-500) 100%);
+  --a3-grad-button-coral: linear-gradient(135deg, var(--coral-500) 0%, var(--coral-700) 100%);
+  --a3-grad-dark: linear-gradient(140deg, #101c24, #192732);
+  --a3-grad-card: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(227, 245, 248, 0.4) 100%);
+  --a3-grad-teal-dark: linear-gradient(160deg, #0a252c, #004a56 55%, var(--brand-600));
+  --a3-grad-coral-dark: linear-gradient(160deg, var(--coral-700), var(--coral-500) 55%, #fb799b);
+
+  /* Shape & Elevation */
+  --a3-radius-xl: 28px;
+  --a3-radius-lg: 24px;
+  --a3-radius-md: 16px;
+  --a3-radius-sm: 12px;
+  --a3-shadow-card: 0 12px 32px -12px rgba(12, 18, 22, 0.09);
+  --a3-shadow-card-hover: 0 26px 52px -14px rgba(12, 18, 22, 0.18);
+  --a3-shadow-glow-cyan: 0 18px 40px -16px rgba(4, 170, 196, 0.48);
+  --a3-shadow-glow-pink: 0 18px 40px -14px rgba(250, 103, 147, 0.52);
+  --a3-shadow-glow-brand: 0 20px 46px -14px rgba(0, 129, 150, 0.4);
+  --a3-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ---- Text Gradient Utilities ---- */
+.a3-text-gradient {
+  background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-400) 45%, var(--coral-500) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  padding-bottom: 0.12em;
+  line-height: 1.15;
+}
+
+.a3-text-gradient-purple {
+  background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-400) 50%, var(--coral-500) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  padding-bottom: 0.12em;
+  line-height: 1.15;
+}
+
+.a3-text-gradient-cyan {
+  background: linear-gradient(135deg, #008196 0%, #04aac4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  padding-bottom: 0.12em;
+  line-height: 1.15;
+}
+
+/* ---- Iridescent Mesh Hero ---- */
+.a3-hero-iridescent {
+  position: relative;
+  background: var(--a3-grad-iridescent);
+  color: var(--ink-900);
+  overflow: hidden;
+}
+
+/* ---- Node Network Visual Animations ---- */
+@keyframes a3node-orbit {
+  0% {
+    transform: rotate(0deg) translateX(110px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(110px) rotate(-360deg);
+  }
+}
+
+@keyframes a3node-orbit-rev {
+  0% {
+    transform: rotate(360deg) translateX(170px) rotate(-360deg);
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(170px) rotate(0deg);
+  }
+}
+
+/* ---- Base resets ---- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--ink-900);
+  background: var(--a3-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: 'Outfit', 'Archivo', sans-serif;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  background: var(--brand-100);
+  color: var(--brand-600);
+}
+
+/* ======================================================
+   LAYOUT CONTAINER & RESPONSIVE SPACING
+   ====================================================== */
+.a3-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+@media (max-width: 1024px) {
+  .a3-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .a3-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* ======================================================
+   AMBIENT GRADIENT BLOBS
+   ====================================================== */
+.a3-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+
+.a3-blob--cyan {
+  background: radial-gradient(circle, var(--brand-400), transparent 70%);
+}
+
+.a3-blob--teal {
+  background: radial-gradient(circle, var(--brand-600), transparent 70%);
+}
+
+.a3-blob--pink {
+  background: radial-gradient(circle, var(--coral-500), transparent 70%);
+}
+
+.a3-blob--purple {
+  background: radial-gradient(circle, var(--brand-400), transparent 70%);
+}
+
+.a3-blob--green {
+  background: radial-gradient(circle, var(--a3-green-500), transparent 70%);
+}
+
+.a3-blob--white {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent 70%);
+}
+
+@keyframes a3float {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-16px, 20px) scale(1.05);
+  }
+}
+
+@keyframes a3float-rev {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(16px, -18px) scale(0.95);
+  }
+}
+
+@keyframes a3float-sm {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes a3marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Infinite Scrolling Marquee Track */
+.a3-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 64px;
+  animation: a3marquee 24s linear infinite;
+  align-items: center;
+  will-change: transform;
+}
+
+.a3-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes a3spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes a3pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes a3shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes a3fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes a3bar-fill {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: var(--target-width, 0);
+  }
+}
+
+@keyframes a3ping {
+
+  75%,
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* ======================================================
+   GLASS SURFACES
+   ====================================================== */
+.a3-glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px) saturate(170%);
+  -webkit-backdrop-filter: blur(20px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.80);
+}
+
+.a3-glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(227, 245, 248, 0.82);
+  box-shadow: 0 16px 36px -12px rgba(12, 18, 22, 0.07);
+}
+
+.a3-glass-dark {
+  background: rgba(12, 18, 22, 0.68);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.a3-glass-teal {
+  background: rgba(0, 129, 150, 0.12);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(4, 170, 196, 0.25);
+}
+
+.a3-glass-hero {
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+/* ======================================================
+   MODERN SAAS CARDS
+   ====================================================== */
+.a3-card {
+  border-radius: var(--a3-radius-lg);
+  background: var(--a3-white);
+  border: 1px solid var(--a3-line-soft);
+  box-shadow: var(--a3-shadow-card);
+  transition: transform 320ms var(--a3-ease), box-shadow 320ms var(--a3-ease), border-color 320ms var(--a3-ease);
+  will-change: transform;
+}
+
+.a3-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--a3-shadow-card-hover);
+  border-color: var(--brand-100);
+}
+
+.a3-card-grad-border {
+  position: relative;
+  border-radius: var(--a3-radius-lg);
+  border: 1.5px solid transparent;
+  background: linear-gradient(var(--a3-white), var(--a3-white)) padding-box,
+    var(--a3-grad-brand) border-box;
+  box-shadow: var(--a3-shadow-card);
+  transition: transform 320ms var(--a3-ease), box-shadow 320ms var(--a3-ease);
+}
+
+.a3-card-grad-border:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: var(--a3-shadow-glow-cyan);
+}
+
+/* ======================================================
+   STAT METRIC CARDS
+   ====================================================== */
+.a3-metric-card {
+  border-radius: var(--a3-radius-lg);
+  padding: 28px 26px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(227, 245, 248, 0.9);
+  box-shadow: 0 10px 30px -10px rgba(4, 170, 196, 0.10);
+  transition: transform 300ms var(--a3-ease), box-shadow 300ms var(--a3-ease), border-color 300ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.a3-metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--a3-grad-brand);
+  opacity: 0.8;
+}
+
+.a3-metric-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(4, 170, 196, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.a3-metric-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px -14px rgba(4, 170, 196, 0.24);
+  border-color: var(--brand-400);
+}
+
+.a3-metric-num {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: clamp(34px, 3.8vw, 48px);
+  background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-400) 55%, var(--coral-500) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+/* ======================================================
+   FEATURE ICON CONTAINER
+   ====================================================== */
+.a3-feature-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 10px 26px -8px rgba(0, 129, 150, 0.45);
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-400));
+  transition: transform 260ms var(--a3-ease), box-shadow 260ms var(--a3-ease);
+}
+
+.a3-feature-icon:hover {
+  transform: scale(1.08) rotate(-3deg);
+  box-shadow: var(--a3-shadow-glow-brand);
+}
+
+/* ======================================================
+   TAGS / BADGES
+   ====================================================== */
+.a3-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Archivo', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 13px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.a3-tag--teal {
+  background: var(--brand-100);
+  color: var(--brand-600);
+  border: 1px solid rgba(4, 170, 196, 0.2);
+}
+
+.a3-tag--pink {
+  background: var(--a3-pink-100);
+  color: var(--coral-700);
+  border: 1px solid rgba(250, 103, 147, 0.2);
+}
+
+.a3-tag--dark {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.a3-tag--live {
+  background: var(--coral-500);
+  color: #fff;
+  box-shadow: 0 4px 14px -4px rgba(250, 103, 147, 0.5);
+}
+
+/* ======================================================
+   PROGRESS BARS
+   ====================================================== */
+.a3-progress-track {
+  height: 8px;
+  background: rgba(12, 18, 22, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.a3-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-600), var(--brand-400));
+  transition: width 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.a3-progress-fill--coral {
+  background: linear-gradient(90deg, var(--coral-700), var(--coral-500));
+}
+
+/* ======================================================
+   DIVIDERS
+   ====================================================== */
+.a3-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brand-100) 20%, var(--brand-100) 80%, transparent);
+  border: none;
+  margin: 0;
+}
+
+.a3-divider--dark {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12) 20%, rgba(255, 255, 255, 0.12) 80%, transparent);
+}
+
+/* ======================================================
+   STEP CONNECTORS
+   ====================================================== */
+.a3-step-connector {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+
+.a3-step-connector::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-400), var(--coral-500));
+  opacity: 0.4;
+  border-radius: 2px;
+}
+
+/* ======================================================
+   TESTIMONIAL CARD
+   ====================================================== */
+.a3-testimonial-card {
+  border-radius: var(--a3-radius-lg);
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(227, 245, 248, 0.9);
+  box-shadow: var(--a3-shadow-card);
+  transition: transform 280ms var(--a3-ease), box-shadow 280ms var(--a3-ease);
+  position: relative;
+}
+
+.a3-testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  font-family: 'Archivo', sans-serif;
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--brand-100);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.a3-testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--a3-shadow-card-hover);
+}
+
+/* ======================================================
+   BUTTONS
+   ====================================================== */
+.a3-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  transition: transform 220ms var(--a3-ease), box-shadow 220ms var(--a3-ease), filter 220ms var(--a3-ease), background 220ms var(--a3-ease);
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+
+.a3-btn:hover {
+  transform: translateY(-2px);
+}
+
+.a3-btn:active {
+  transform: translateY(0);
+}
+
+.a3-btn-primary {
+  background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-400) 45%, var(--coral-500) 100%);
+  color: var(--a3-white);
+  box-shadow: 0 10px 28px -8px rgba(0, 129, 150, 0.52);
+}
+
+.a3-btn-primary:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 18px 38px -8px rgba(250, 103, 147, 0.6);
+}
+
+.a3-btn-coral {
+  background: var(--a3-grad-button-coral);
+  color: var(--a3-white);
+  box-shadow: 0 10px 24px -8px rgba(250, 103, 147, 0.52);
+}
+
+.a3-btn-coral:hover {
+  filter: brightness(1.06);
+  box-shadow: var(--a3-shadow-glow-pink);
+}
+
+.a3-btn-ghost {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(0, 129, 150, 0.25);
+  color: var(--brand-600);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 4px 16px -4px rgba(0, 129, 150, 0.10);
+}
+
+.a3-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: var(--brand-400);
+  color: var(--brand-600);
+  box-shadow: 0 8px 24px -6px rgba(0, 129, 150, 0.20);
+}
+
+.a3-btn-ghost-dark {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1.5px solid rgba(255, 255, 255, 0.42);
+  color: var(--a3-white);
+  backdrop-filter: blur(12px);
+}
+
+.a3-btn-ghost-dark:hover {
+  background: rgba(255, 255, 255, 0.26);
+  border-color: rgba(255, 255, 255, 0.72);
+}
+
+.a3-btn-outline {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid var(--brand-100);
+  color: var(--ink-900);
+  box-shadow: 0 4px 14px -4px rgba(12, 18, 22, 0.06);
+}
+
+.a3-btn-outline:hover {
+  border-color: var(--brand-400);
+  color: var(--brand-600);
+  box-shadow: var(--a3-shadow-card);
+}
+
+.a3-btn-outline-coral {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid var(--brand-100);
+  color: var(--ink-900);
+  box-shadow: 0 4px 14px -4px rgba(12, 18, 22, 0.06);
+}
+
+.a3-btn-outline-coral:hover {
+  border-color: var(--coral-500);
+  color: var(--coral-700);
+  box-shadow: var(--a3-shadow-glow-pink);
+}
+
+.a3-btn-teal {
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-400));
+  color: var(--a3-white);
+  box-shadow: 0 10px 24px -10px rgba(0, 129, 150, 0.55);
+}
+
+.a3-btn-teal:hover {
+  filter: brightness(1.06);
+  box-shadow: var(--a3-shadow-glow-cyan);
+}
+
+/* ======================================================
+   NAVIGATION
+   ====================================================== */
+.a3-header {
+  transition: background 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+}
+
+.a3-header.is-scrolled {
+  box-shadow: 0 8px 30px -18px rgba(12, 18, 22, 0.28);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.a3-nav-desktop {
+  gap: 18px !important;
+  flex-wrap: nowrap;
+}
+
+.a3-nav-desktop>* {
+  flex: none;
+  white-space: nowrap;
+}
+
+.a3drop {
+  white-space: nowrap;
+}
+
+.a3navlink {
+  position: relative;
+  white-space: nowrap;
+  flex: none;
+  transition: color 200ms ease;
+}
+
+.a3navlink:hover {
+  color: var(--brand-600) !important;
+}
+
+.a3navlink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2.5px;
+  background: var(--a3-grad-brand);
+  transition: width 240ms var(--a3-ease);
+  border-radius: 2px;
+}
+
+.a3navlink:hover::after {
+  width: 100%;
+}
+
+.a3drop {
+  position: relative;
+}
+
+.a3drop .a3menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 14px;
+  min-width: 290px;
+  /* Solid (not blurred) background: backdrop-filter + an opacity/visibility
+     transition on an element that starts hidden is a known browser
+     compositing trap — it can fail to paint on its first appearance and
+     stay blank until some other repaint (scroll, resize, refresh) forces
+     it to redraw. The background is already 96% opaque, so blur added
+     negligible visual value; removing it removes the whole bug class. */
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid var(--brand-100);
+  border-radius: var(--a3-radius-md);
+  box-shadow: 0 24px 52px -14px rgba(12, 18, 22, 0.20);
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px) scale(0.97);
+  transition: opacity 200ms var(--a3-ease), transform 200ms var(--a3-ease), visibility 200ms;
+  z-index: 60;
+}
+
+.a3drop:hover .a3menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.a3menu a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--a3-slate-700);
+  white-space: nowrap;
+  border-radius: 10px;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.a3menu a:hover {
+  color: var(--brand-600) !important;
+  background: var(--brand-100);
+}
+
+/* ======================================================
+   SCROLL REVEAL (WITH FAILSAFE AUTO-VISIBLE)
+   ====================================================== */
+@keyframes a3revealAutoVisible {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.a3-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 650ms cubic-bezier(0.2, 0.7, 0.2, 1), transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: calc(var(--i, 0) * 80ms);
+  animation: a3revealAutoVisible 0.01s forwards 350ms;
+}
+
+.a3-reveal.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+.a3-stagger>* {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms cubic-bezier(0.2, 0.7, 0.2, 1), transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  animation: a3revealAutoVisible 0.01s forwards 350ms;
+}
+
+.a3-stagger.is-visible>* {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+.a3-stagger.is-visible>*:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.a3-stagger.is-visible>*:nth-child(2) {
+  transition-delay: 80ms;
+}
+
+.a3-stagger.is-visible>*:nth-child(3) {
+  transition-delay: 160ms;
+}
+
+.a3-stagger.is-visible>*:nth-child(4) {
+  transition-delay: 240ms;
+}
+
+.a3-stagger.is-visible>*:nth-child(5) {
+  transition-delay: 320ms;
+}
+
+.a3-stagger.is-visible>*:nth-child(6) {
+  transition-delay: 400ms;
+}
+
+/* ======================================================
+   FAQ ACCORDION
+   ====================================================== */
+.a3-faq-item {
+  border-radius: var(--a3-radius-md);
+  border: 1px solid var(--a3-line-soft);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: border-color 240ms ease, box-shadow 240ms ease;
+}
+
+.a3-faq-item:hover {
+  border-color: var(--brand-100);
+  box-shadow: var(--a3-shadow-card);
+}
+
+.a3-faq-item.is-open {
+  border-color: var(--brand-400);
+  background: var(--a3-white);
+  box-shadow: 0 10px 30px -10px rgba(4, 170, 196, 0.14);
+}
+
+.a3-faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 26px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink-900);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.a3-faq-icon {
+  flex-shrink: 0;
+  transition: transform 320ms var(--a3-ease);
+  color: var(--brand-600);
+}
+
+.a3-faq-item.is-open .a3-faq-icon {
+  transform: rotate(45deg);
+  color: var(--coral-500);
+}
+
+.a3-faq-a-wrap {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 380ms var(--a3-ease);
+}
+
+.a3-faq-a {
+  padding: 0 26px 24px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--a3-slate-600);
+}
+
+/* ======================================================
+   PRICING CARDS
+   ====================================================== */
+.a3-price-card {
+  position: relative;
+  border-radius: var(--a3-radius-lg);
+  padding: 40px 34px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--a3-line-soft);
+  box-shadow: var(--a3-shadow-card);
+  transition: transform 320ms var(--a3-ease), box-shadow 320ms var(--a3-ease);
+}
+
+.a3-price-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--a3-shadow-card-hover);
+}
+
+.a3-price-card--featured {
+  border: 1.5px solid transparent;
+  background: linear-gradient(var(--a3-white), var(--a3-white)) padding-box, var(--a3-grad-brand) border-box;
+  box-shadow: var(--a3-shadow-glow-cyan);
+  transform: scale(1.03);
+}
+
+.a3-price-card--featured:hover {
+  transform: scale(1.03) translateY(-6px);
+}
+
+/* ======================================================
+   TICKER / MARQUEE
+   ====================================================== */
+.a3-carousel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.a3-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.a3-carousel-track>* {
+  scroll-snap-align: start;
+}
+
+.a3-carousel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--a3-line);
+  background: var(--a3-white);
+  color: var(--ink-900);
+  cursor: pointer;
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+
+.a3-carousel-btn:hover {
+  background: var(--brand-600);
+  color: var(--a3-white);
+  border-color: var(--brand-600);
+  transform: translateY(-2px);
+}
+
+/* ======================================================
+   MOBILE NAV
+   ====================================================== */
+.a3-nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--a3-line);
+  background: var(--a3-white);
+  cursor: pointer;
+}
+
+.a3-nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--ink-900);
+  transition: transform 240ms var(--a3-ease), opacity 240ms var(--a3-ease);
+}
+
+.a3-header.is-open .a3-nav-toggle span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.a3-header.is-open .a3-nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.a3-header.is-open .a3-nav-toggle span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.a3-mobile-panel {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 20px 20px;
+  border-top: 1px solid var(--a3-line-soft);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px);
+}
+
+.a3-mobile-panel a {
+  padding: 12px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--a3-slate-700);
+  border-radius: 12px;
+}
+
+.a3-mobile-panel a:hover {
+  background: var(--brand-100);
+  color: var(--brand-600);
+}
+
+@media (max-width: 900px) {
+  .a3-nav-desktop {
+    display: none !important;
+  }
+
+  .a3-nav-toggle {
+    display: flex;
+  }
+
+  .a3-header.is-open .a3-mobile-panel {
+    display: flex;
+  }
+}
+
+/* ======================================================
+   FOOTER
+   ====================================================== */
+.a3-footer-link {
+  position: relative;
+  transition: color 200ms ease, padding-left 200ms ease;
+}
+
+.a3-footer-link:hover {
+  color: var(--brand-400) !important;
+  padding-left: 4px;
+}
+
+.a3-footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(0, 129, 150, 0.10);
+  border: 1.5px solid rgba(0, 129, 150, 0.18);
+  color: var(--brand-600);
+  transition: background 200ms ease, border-color 200ms ease, transform 200ms ease, color 200ms ease;
+}
+
+.a3-footer-social:hover {
+  background: var(--brand-600);
+  border-color: var(--brand-600);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.a3-footer-newsletter-input {
+  flex: 1;
+  border: 1.5px solid rgba(0, 129, 150, 0.2);
+  border-radius: 999px;
+  padding: 11px 18px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: var(--ink-900);
+  background: #fff;
+  outline: none;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.a3-footer-newsletter-input:focus {
+  border-color: var(--brand-400);
+  box-shadow: 0 0 0 3px rgba(4, 170, 196, 0.12);
+}
+
+@media (max-width: 700px) {
+  .a3-footer-cols {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ======================================================
+   TYPOGRAPHY UTILITIES
+   ====================================================== */
+.a3-hl {
+  background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-400) 45%, var(--coral-500) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.a3-hl-white {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.a3-eyebrow {
+  font-family: 'JetBrains Mono', 'Archivo', monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* hairline rule list — structured hero / section lists */
+.a3-rulelist {
+  border-top: 1px solid rgba(0, 129, 150, 0.16);
+}
+
+.a3-rulerow {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 15px 2px;
+  border-bottom: 1px solid rgba(0, 129, 150, 0.16);
+}
+
+.a3-rulekey {
+  flex: none;
+  width: 104px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.a3-statline {
+  display: flex;
+  align-items: center;
+  gap: 18px 22px;
+  flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--a3-slate-600);
+}
+
+.a3-statline>span {
+  white-space: nowrap;
+}
+
+.a3-statline b {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--ink-900);
+  margin-right: 7px;
+}
+
+@media (max-width: 900px) {
+  .a3-rulekey {
+    width: 84px;
+  }
+}
+
+.a3-section-num {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: clamp(80px, 10vw, 140px);
+  color: rgba(4, 170, 196, 0.06);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ======================================================
+   SECTION BACKGROUNDS
+   ====================================================== */
+.a3-wash-soft {
+  position: relative;
+  background:
+    radial-gradient(60% 50% at 12% 8%, rgba(4, 170, 196, 0.10), transparent 70%),
+    radial-gradient(55% 50% at 88% 15%, rgba(0, 160, 187, 0.08), transparent 70%),
+    radial-gradient(60% 55% at 50% 100%, rgba(250, 103, 147, 0.07), transparent 70%),
+    var(--a3-surface);
+}
+
+.a3-wash-dark {
+  background:
+    radial-gradient(60% 60% at 15% 20%, rgba(4, 170, 196, 0.22), transparent 70%),
+    radial-gradient(55% 55% at 85% 80%, rgba(250, 103, 147, 0.16), transparent 70%),
+    linear-gradient(160deg, #003c46 0%, #00505e 60%, #006070 100%);
+}
+
+.a3-wash-teal {
+  background:
+    radial-gradient(70% 70% at 0% 0%, rgba(4, 170, 196, 0.20), transparent 60%),
+    radial-gradient(50% 50% at 100% 100%, rgba(0, 129, 150, 0.15), transparent 60%),
+    #f0fafb;
+}
+
+.a3-wash-brand {
+  background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-400) 38%, #04c4e0 60%, var(--coral-500) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ======================================================
+   HERO DARK SECTION
+   ====================================================== */
+.a3-hero-dark {
+  position: relative;
+  background: linear-gradient(160deg, #002f38 0%, #004a56 45%, var(--brand-600) 100%);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.a3-hero-dark-coral {
+  position: relative;
+  background: linear-gradient(160deg, var(--coral-700) 0%, var(--coral-500) 55%, #fb799b 100%);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.a3-topo-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/bg-topo.svg');
+  background-size: 640px;
+  opacity: 0.10;
+  pointer-events: none;
+}
+
+/* ======================================================
+   LIVE INDICATOR
+   ====================================================== */
+.a3-live-dot {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--coral-500);
+}
+
+.a3-live-dot::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: var(--coral-500);
+  opacity: 0.4;
+  animation: a3ping 1.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* ======================================================
+   FOCUS VISIBLE
+   ====================================================== */
+.a3-focusable:focus-visible {
+  outline: 2.5px solid var(--brand-400);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* ======================================================
+   LIB PILL (framework tags)
+   ====================================================== */
+.a3-lib-pill {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--a3-white);
+  border: 1.5px solid var(--a3-line);
+  color: var(--a3-slate-700);
+  cursor: default;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease, transform 200ms ease;
+}
+
+.a3-lib-pill:hover {
+  background: var(--brand-100);
+  border-color: var(--brand-400);
+  color: var(--brand-600);
+  transform: translateY(-2px);
+}
+
+/* ======================================================
+   MISC UTILITIES
+   ====================================================== */
+.a3-orbit-slow {
+  animation: a3spin-slow 40s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.a3-pulse-ring {
+  animation: a3pulse-glow 2.6s ease-in-out infinite;
+}
+
+.a3-float-sm {
+  animation: a3float-sm 5s ease-in-out infinite;
+}
+
+/* ======================================================
+   REDUCED MOTION
+   ====================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .a3-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .a3-stagger>* {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .a3-blob,
+  [class*="a3float"],
+  .a3-orbit-slow,
+  .a3-pulse-ring,
+  .a3-float-sm {
+    animation: none !important;
+  }
+
+  * {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Triggered state via JS */
+.a3-reveal-up.is-visible,
+.a3-reveal-left.is-visible,
+.a3-reveal-right.is-visible,
+.a3-reveal-scale.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered children */
+.a3-stagger-group>* {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s var(--a3-ease), transform 0.55s var(--a3-ease);
+}
+
+.a3-stagger-group.is-visible>*:nth-child(1) {
+  transition-delay: 0.05s;
+  opacity: 1;
+  transform: none;
+}
+
+.a3-stagger-group.is-visible>*:nth-child(2) {
+  transition-delay: 0.15s;
+  opacity: 1;
+  transform: none;
+}
+
+.a3-stagger-group.is-visible>*:nth-child(3) {
+  transition-delay: 0.25s;
+  opacity: 1;
+  transform: none;
+}
+
+.a3-stagger-group.is-visible>*:nth-child(4) {
+  transition-delay: 0.35s;
+  opacity: 1;
+  transform: none;
+}
+
+.a3-stagger-group.is-visible>*:nth-child(5) {
+  transition-delay: 0.45s;
+  opacity: 1;
+  transform: none;
+}
+
+.a3-stagger-group.is-visible>*:nth-child(6) {
+  transition-delay: 0.55s;
+  opacity: 1;
+  transform: none;
+}
+
+/* ======================================================
+   GRADIENT BORDER CARD — Premium Feature Cards
+   ====================================================== */
+.a3-feature-card {
+  position: relative;
+  border-radius: var(--a3-radius-xl);
+  background: #fff;
+  padding: 2px;
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, var(--brand-400), var(--brand-600) 50%, var(--coral-500)) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 24px -8px rgba(0, 129, 150, 0.12);
+  transition: transform 0.35s var(--a3-ease), box-shadow 0.35s var(--a3-ease);
+}
+
+.a3-feature-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 28px 60px -16px rgba(0, 129, 150, 0.22);
+}
+
+/* ======================================================
+   MAGNETIC GLOW BUTTON
+   ====================================================== */
+.a3-glow-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.a3-glow-btn::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--brand-400), var(--coral-500), var(--brand-600));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  filter: blur(12px);
+}
+
+.a3-glow-btn:hover::before {
+  opacity: 0.6;
+}
+
+/* ======================================================
+   ANIMATED STAT COUNTER PILL
+   ====================================================== */
+.a3-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--brand-100);
+  border-radius: 999px;
+  padding: 10px 20px;
+  box-shadow: 0 6px 20px -6px rgba(0, 129, 150, 0.14);
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s var(--a3-ease), box-shadow 0.3s var(--a3-ease);
+}
+
+.a3-stat-pill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px -10px rgba(0, 129, 150, 0.2);
+}
+
+.a3-stat-pill-num {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+
+/* ======================================================
+   ANIMATED GRADIENT MESH BACKGROUND
+   ====================================================== */
+@keyframes a3meshShift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.a3-mesh-bg {
+  background: linear-gradient(-45deg, #eef9fb, #f4efff, #fff4f7, #eef9fb, #e3f5f8);
+  background-size: 400% 400%;
+  animation: a3meshShift 18s ease infinite;
+}
+
+/* ======================================================
+   CARD SPOTLIGHT — On hover, subtle gradient follows cursor intent
+   ====================================================== */
+.a3-spotlight-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--a3-radius-lg);
+  border: 1px solid var(--a3-line-soft);
+  background: #fff;
+  transition: transform 0.32s var(--a3-ease), box-shadow 0.32s var(--a3-ease), border-color 0.32s var(--a3-ease);
+}
+
+.a3-spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(4, 170, 196, 0.06), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.a3-spotlight-card:hover::before {
+  opacity: 1;
+}
+
+.a3-spotlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -14px rgba(0, 129, 150, 0.16);
+  border-color: var(--brand-100);
+}
+
+/* ======================================================
+   FLOATING LABEL INDICATOR (active pill)
+   ====================================================== */
+.a3-active-pill {
+  position: relative;
+}
+
+.a3-active-pill::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--brand-600), var(--coral-500));
+  transform: scaleX(0);
+  transition: transform 0.3s var(--a3-ease);
+  transform-origin: left;
+}
+
+.a3-active-pill.is-active::after {
+  transform: scaleX(1);
+}
+
+/* ======================================================
+   TICKER / RUNNING NUMBERS
+   ====================================================== */
+@keyframes a3countUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.a3-count-animate {
+  animation: a3countUp 0.5s var(--a3-ease) forwards;
+}
+
+/* ======================================================
+   GRADIENT TEXT — ANIMATED SHIFT
+   ====================================================== */
+@keyframes a3gradShift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.a3-text-gradient-animated {
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-400), var(--coral-500), var(--brand-600));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: a3gradShift 6s ease infinite;
+  display: inline-block;
+  padding-bottom: 0.12em;
+  line-height: 1.15;
+}
+
+/* ======================================================
+   TILT CARD EFFECT (perspective on hover)
+   ====================================================== */
+.a3-tilt-card {
+  transition: transform 0.4s var(--a3-ease), box-shadow 0.4s var(--a3-ease);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.a3-tilt-card:hover {
+  transform: perspective(800px) rotateX(2deg) rotateY(-2deg) translateY(-6px);
+  box-shadow: 0 30px 60px -16px rgba(0, 129, 150, 0.18);
+}
+
+/* ======================================================
+   ICON BOUNCE ON HOVER
+   ====================================================== */
+@keyframes a3iconBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-6px);
+  }
+
+  70% {
+    transform: translateY(-2px);
+  }
+}
+
+.a3-icon-bounce:hover {
+  animation: a3iconBounce 0.5s var(--a3-ease);
+}
+
+/* ======================================================
+   HERO TYPING CURSOR
+   ====================================================== */
+@keyframes a3blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.a3-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--brand-400);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: a3blink 1s step-end infinite;
+}
+
+/* ======================================================
+   RIBBON BADGE (CORNER)
+   ====================================================== */
+.a3-ribbon {
+  position: absolute;
+  top: 16px;
+  right: -6px;
+  background: var(--coral-500);
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 10px 3px 12px;
+  border-radius: 4px 0 0 4px;
+  box-shadow: 2px 2px 6px rgba(250, 103, 147, 0.4);
+}
+
+.a3-ribbon::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  border-left: 6px solid var(--coral-700);
+  border-bottom: 4px solid transparent;
+}
+
+/* ======================================================
+   SCROLL PROGRESS BAR (top of page)
+   ====================================================== */
+.a3-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-600), var(--brand-400), var(--coral-500));
+  z-index: 9999;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ======================================================
+   AVATAR STACK
+   ====================================================== */
+.a3-avatar-stack {
+  display: flex;
+}
+
+.a3-avatar-stack>* {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.a3-avatar-stack>*:first-child {
+  margin-left: 0;
+}
+
+/* ======================================================
+   CARD TOP GRADIENT ACCENT
+   ====================================================== */
+.a3-card-top-brand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 9999px 9999px 0 0;
+  background: linear-gradient(90deg, var(--brand-600), var(--brand-400));
+}
+
+.a3-card-top-coral::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 9999px 9999px 0 0;
+  background: linear-gradient(90deg, var(--coral-700), var(--coral-500));
+}
+
+/* ======================================================
+   PULSE RING ANIMATION  (for CTA or live badge)
+   ====================================================== */
+@keyframes a3ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.a3-ripple-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--coral-500);
+  animation: a3ripple 2s ease-out infinite;
+  pointer-events: none;
+}
+
+/* ======================================================
+   GRADIENT SECTION DIVIDER
+   ====================================================== */
+.a3-section-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brand-100) 20%, var(--brand-400) 50%, var(--brand-100) 80%, transparent);
+  border: none;
+  margin: 0;
+}
+
+/* ======================================================
+   GRID PATTERN OVERLAY
+   ====================================================== */
+.a3-grid-pattern {
+  background-image:
+    linear-gradient(rgba(0, 129, 150, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 129, 150, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ======================================================
+   FEATURE ROW — alternating icon + text layout
+   ====================================================== */
+.a3-feature-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--a3-line-soft);
+  transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.a3-feature-row:last-child {
+  border-bottom: none;
+}
+
+.a3-feature-row:hover {
+  background: rgba(227, 245, 248, 0.4);
+  padding-left: 8px;
+  border-radius: 12px;
+}
+
+/* ======================================================
+   TOOLTIP UTILITY
+   ====================================================== */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink-900);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 100;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
+/* ======================================================
+   NAV ACTIVE UNDERLINE SLIDE
+   ====================================================== */
+.a3navlink {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.a3navlink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-600), var(--coral-500));
+  border-radius: 2px;
+  transition: width 0.3s var(--a3-ease);
+}
+
+.a3navlink:hover::after,
+.a3navlink.active-link::after {
+  width: 100%;
+}
+
+/* ======================================================
+   BADGE PULSE (Live/New indicators)
+   ====================================================== */
+@keyframes a3badgePop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.a3-badge-pop {
+  animation: a3badgePop 0.45s var(--a3-ease) forwards;
+}
+
+/* ======================================================
+   HERO PARTICLE / ORBS
+   ====================================================== */
+@keyframes a3orbFloat {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(12px, -18px) scale(1.04);
+  }
+
+  66% {
+    transform: translate(-10px, 10px) scale(0.97);
+  }
+}
+
+.a3-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: a3orbFloat 12s ease-in-out infinite;
+}
+
+.a3-orb--brand {
+  background: radial-gradient(circle, var(--brand-400) 0%, transparent 70%);
+  opacity: 0.35;
+  filter: blur(40px);
+}
+
+.a3-orb--coral {
+  background: radial-gradient(circle, var(--coral-500) 0%, transparent 70%);
+  opacity: 0.28;
+  filter: blur(50px);
+}
+
+/* ======================================================
+   PLATFORM CARD — ENHANCED
+   ====================================================== */
+.a3-platform-card {
+  border-radius: 26px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(227, 245, 248, 0.8);
+  box-shadow: 0 8px 24px -8px rgba(0, 129, 150, 0.10);
+  transition: transform 0.36s var(--a3-ease), box-shadow 0.36s var(--a3-ease), border-color 0.36s var(--a3-ease);
+  position: relative;
+}
+
+.a3-platform-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1.5px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, var(--brand-400), var(--coral-500)) border-box;
+  opacity: 0;
+  transition: opacity 0.36s ease;
+  pointer-events: none;
+}
+
+.a3-platform-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 32px 64px -18px rgba(0, 129, 150, 0.22);
+}
+
+.a3-platform-card:hover::after {
+  opacity: 1;
+}
+
+/* ======================================================
+   GLOWING NUMBER (stat display)
+   ====================================================== */
+.a3-glow-num {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-400) 55%, var(--coral-500) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 8px rgba(4, 170, 196, 0.3));
+}
+
+/* ======================================================
+   REDUCED MOTION
+   ====================================================== */
+@media (prefers-reduced-motion: reduce) {
+
+  .a3-reveal-up,
+  .a3-reveal-left,
+  .a3-reveal-right,
+  .a3-reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .a3-stagger-group>* {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .a3-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .a3-stagger>* {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .a3-blob,
+  [class*="a3float"],
+  .a3-orbit-slow,
+  .a3-pulse-ring,
+  .a3-float-sm,
+  .a3-mesh-bg,
+  .a3-text-gradient-animated,
+  .a3-ripple-ring,
+  .a3-orb {
+    animation: none !important;
+  }
+
+  * {
+    scroll-behavior: auto !important;
+  }
+}
