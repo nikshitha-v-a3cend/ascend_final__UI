@@ -75,23 +75,23 @@ export const RehearsePage: React.FC = () => {
               <img src={rehearseImg} alt="REHEARSE AI Simulation" className="w-full h-auto block rounded-2xl" />
             </div>
 
-            {/* Score Badge */}
-            <div className="absolute -bottom-4 -left-3 bg-white/96 backdrop-blur-md border border-brand-600/28 p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-floatSm">
-              <div className="w-10 h-10 rounded-full bg-[conic-gradient(#008196_92%,rgba(4,170,196,0.15)_0)] flex items-center justify-center">
+            {/* Score Badge (desktop only — the image's own corners are too busy at mobile size) */}
+            <div className="hidden sm:flex absolute -bottom-4 -left-3 bg-white/96 backdrop-blur-md border border-brand-600/28 p-4 rounded-2xl shadow-xl items-center gap-3 animate-floatSm">
+              <div className="w-10 h-10 rounded-full bg-[conic-gradient(#008196_92%,rgba(4,170,196,0.15)_0)] flex items-center justify-center shrink-0">
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center font-heading font-black text-xs text-brand-600">
                   92%
                 </div>
               </div>
-              <div>
-                <div className="font-heading font-extrabold text-xs text-ink-900">Readiness Score</div>
-                <div className="text-[11px] text-slate-500">AI scored in real-time</div>
+              <div className="min-w-0">
+                <div className="font-heading font-extrabold text-xs text-ink-900 whitespace-nowrap">Readiness Score</div>
+                <div className="text-[11px] text-slate-500 whitespace-nowrap">AI scored in real-time</div>
               </div>
             </div>
 
-            {/* Live Indicator */}
-            <div className="absolute -top-3 -right-3 bg-white/92 backdrop-blur-md border border-brand-600/22 px-4 py-2.5 rounded-2xl flex items-center gap-2 shadow-lg animate-floatSm">
-              <div className="a3-live-dot" />
-              <span className="font-archivo font-bold text-xs text-brand-600">AI Avatar Active</span>
+            {/* Live Indicator (desktop only) */}
+            <div className="hidden sm:flex absolute -top-3 -right-3 bg-white/92 backdrop-blur-md border border-brand-600/22 px-4 py-2.5 rounded-2xl items-center gap-2 shadow-lg animate-floatSm">
+              <div className="a3-live-dot shrink-0" />
+              <span className="font-archivo font-bold text-xs text-brand-600 whitespace-nowrap">AI Avatar Active</span>
             </div>
           </div>
         </div>

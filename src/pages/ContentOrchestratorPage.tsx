@@ -61,18 +61,18 @@ export const ContentOrchestratorPage: React.FC = () => {
           {/* Hero Visual Image */}
           <div className="relative">
             <ContentOrchestratorHeroGraphic />
-            <div className="absolute -bottom-4 -left-3 bg-white/96 backdrop-blur-md border border-brand-600/28 p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-floatSm">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-brand-600 to-brand-400 flex items-center justify-center font-heading font-black text-sm text-white">
+            <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-3 max-w-[calc(100%-1rem)] bg-white/96 backdrop-blur-md border border-brand-600/28 p-2.5 sm:p-4 rounded-2xl shadow-xl flex items-center gap-2 sm:gap-3 animate-floatSm">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-r from-brand-600 to-brand-400 flex items-center justify-center font-heading font-black text-xs sm:text-sm text-white shrink-0">
                 5+
               </div>
-              <div>
-                <div className="font-heading font-extrabold text-xs text-ink-900">Output Formats</div>
-                <div className="text-[11px] text-slate-500">One source, every format</div>
+              <div className="min-w-0">
+                <div className="font-heading font-extrabold text-[11px] sm:text-xs text-ink-900 whitespace-nowrap">Output Formats</div>
+                <div className="text-[9px] sm:text-[11px] text-slate-500 whitespace-nowrap">One source, every format</div>
               </div>
             </div>
-            <div className="absolute -top-3 -right-3 bg-white/92 backdrop-blur-md border border-brand-600/22 px-4 py-2 rounded-2xl flex items-center gap-2 shadow-lg animate-floatSm">
-              <div className="a3-live-dot" />
-              <span className="font-archivo font-bold text-xs text-brand-600">AI Engine Active</span>
+            <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 bg-white/92 backdrop-blur-md border border-brand-600/22 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-2xl flex items-center gap-1.5 sm:gap-2 shadow-lg animate-floatSm">
+              <div className="a3-live-dot shrink-0" />
+              <span className="font-archivo font-bold text-[10px] sm:text-xs text-brand-600 whitespace-nowrap">AI Engine Active</span>
             </div>
           </div>
         </div>

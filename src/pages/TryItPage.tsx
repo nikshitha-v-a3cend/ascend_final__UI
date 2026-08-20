@@ -39,10 +39,10 @@ export const TryItPage: React.FC = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3.5">
-              <Link to="/try/live-presenter" className="a3-btn a3-btn-teal px-7 py-3.5 text-sm font-bold">
+              <Link to="/try/live-presenter" className="px-7 py-3.5 text-sm font-bold text-black bg-white border border-[#008196] hover:bg-[#008196] hover:text-white hover:border-[#008196] rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
                 Try Live Presenter →
               </Link>
-              <Link to="/try/simulation" className="a3-btn a3-btn-coral px-7 py-3.5 text-sm font-bold">
+              <Link to="/try/simulation" className="px-7 py-3.5 text-sm font-bold text-black bg-white border border-[#008196] hover:bg-[#ff4081] hover:text-white hover:border-[#ff4081] rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
                 Try Simulation →
               </Link>
             </div>
@@ -68,20 +68,24 @@ export const TryItPage: React.FC = () => {
             <div className="rounded-3xl p-3 bg-white/80 backdrop-blur-xl border border-white shadow-2xl">
               <img src={heroOverviewImg} alt="Live Presenter & Simulation Overview" className="w-full h-auto block rounded-2xl" />
             </div>
-            <div className="absolute -bottom-4 -left-3 bg-white/96 backdrop-blur-md border border-brand-600/28 p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-floatSm">
-              <div className="w-10 h-10 rounded-full bg-[conic-gradient(#008196_92%,rgba(4,170,196,0.15)_0)] flex items-center justify-center">
+
+            {/* Score Badge (desktop only — the image's own corners are too busy at mobile size) */}
+            <div className="hidden sm:flex absolute -bottom-4 -left-3 bg-white/96 backdrop-blur-md border border-brand-600/28 p-4 rounded-2xl shadow-xl items-center gap-3 animate-floatSm">
+              <div className="w-10 h-10 rounded-full bg-[conic-gradient(#008196_92%,rgba(4,170,196,0.15)_0)] flex items-center justify-center shrink-0">
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center font-heading font-black text-xs text-brand-600">
                   92%
                 </div>
               </div>
-              <div>
-                <div className="font-heading font-extrabold text-xs text-ink-900">Readiness Score</div>
-                <div className="text-[11px] text-slate-500">AI scored in real-time</div>
+              <div className="min-w-0">
+                <div className="font-heading font-extrabold text-xs text-ink-900 whitespace-nowrap">Readiness Score</div>
+                <div className="text-[11px] text-slate-500 whitespace-nowrap">AI scored in real-time</div>
               </div>
             </div>
-            <div className="absolute -top-3 -right-3 bg-white/92 backdrop-blur-md border border-brand-600/22 px-4 py-2.5 rounded-2xl flex items-center gap-2 shadow-lg animate-floatSm">
-              <div className="a3-live-dot" />
-              <span className="font-archivo font-bold text-xs text-brand-600">AI Avatar Active</span>
+
+            {/* Live Indicator (desktop only) */}
+            <div className="hidden sm:flex absolute -top-3 -right-3 bg-white/92 backdrop-blur-md border border-brand-600/22 px-4 py-2.5 rounded-2xl items-center gap-2 shadow-lg animate-floatSm">
+              <div className="a3-live-dot shrink-0" />
+              <span className="font-archivo font-bold text-xs text-brand-600 whitespace-nowrap">AI Avatar Active</span>
             </div>
           </div>
         </div>

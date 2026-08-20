@@ -75,10 +75,10 @@ export const PowerTalksPage: React.FC = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3.5 items-center">
-              <a href="#archive-grid" className="a3-btn a3-btn-coral px-8 py-3.5 text-base font-bold shadow-lg">
+              <a href="#archive-grid" className="px-7 py-3.5 text-sm font-bold text-black bg-white border border-[#008196] hover:bg-[#ff4081] hover:text-white hover:border-[#ff4081] rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
                 Explore Keynote Archive ↓
               </a>
-              <Link to="/contact" className="a3-btn a3-btn-outline px-7 py-3.5 text-base font-bold bg-white/80 backdrop-blur-sm hover:bg-white">
+              <Link to="/contact" className="px-7 py-3.5 text-sm font-bold text-black bg-white border border-[#008196] hover:bg-[#008196] hover:text-white hover:border-[#008196] rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
                 Bring one to your team
               </Link>
             </div>
@@ -101,13 +101,13 @@ export const PowerTalksPage: React.FC = () => {
           <div className="relative">
             
             {/* Floating Replay Pill Overlay */}
-            <div className="absolute -top-4 -right-2 z-20 bg-white/95 backdrop-blur-md border border-[#008196]/30 p-3.5 rounded-2xl shadow-xl flex items-center gap-3 animate-floatSm">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-[#008196] to-[#04aac4] flex items-center justify-center font-heading font-black text-sm text-white shadow-sm">
+            <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-2 z-20 max-w-[calc(100%-1rem)] bg-white/95 backdrop-blur-md border border-[#008196]/30 p-2.5 sm:p-3.5 rounded-2xl shadow-xl flex items-center gap-2 sm:gap-3 animate-floatSm">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-r from-[#008196] to-[#04aac4] flex items-center justify-center font-heading font-black text-xs sm:text-sm text-white shadow-sm shrink-0">
                 ▶
               </div>
-              <div>
-                <div className="font-heading font-extrabold text-xs text-ink-900">Keynote Replay Archive</div>
-                <div className="text-[11px] text-slate-500">Request Access to Recording &amp; Workbook</div>
+              <div className="min-w-0">
+                <div className="font-heading font-extrabold text-[11px] sm:text-xs text-ink-900 whitespace-nowrap">Keynote Replay Archive</div>
+                <div className="text-[9px] sm:text-[11px] text-slate-500 whitespace-nowrap">Request Access to Recording &amp; Workbook</div>
               </div>
             </div>
 

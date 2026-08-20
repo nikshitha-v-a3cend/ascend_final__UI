@@ -7,28 +7,28 @@ export const LeadershipSolutionGraphic: React.FC = () => {
     <div className="rounded-[28px] border border-slate-200/90 shadow-2xl overflow-hidden bg-gradient-to-b from-[#fff5f8] via-white to-[#f0f9fa] p-5 sm:p-6 font-sans">
 
       {/* Top Browser / App Window Header Bar */}
-      <div className="flex items-center justify-between pb-4 border-b border-slate-200/70 mb-5">
-        <div className="flex items-center gap-3">
+      <div className="flex items-center justify-between gap-2 flex-wrap pb-4 border-b border-slate-200/70 mb-5">
+        <div className="flex items-center gap-3 min-w-0">
           {/* Red, Yellow, Green Window Dots */}
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 shrink-0">
             <span className="w-3 h-3 rounded-full bg-[#ff5f56]" />
             <span className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
             <span className="w-3 h-3 rounded-full bg-[#27c93f]" />
           </div>
 
-          <div className="h-4 w-px bg-slate-200 mx-1" />
+          <div className="h-4 w-px bg-slate-200 mx-1 shrink-0" />
 
           {/* Logo & Subtitle */}
-          <div className="flex items-center gap-2">
-            <img src={logoImg} alt="A3CEND" className="h-5 w-auto block object-contain" />
-            <span className="font-mono text-xs font-bold text-[#ff4081] tracking-wider uppercase">
+          <div className="flex items-center gap-2 min-w-0">
+            <img src={logoImg} alt="A3CEND" className="h-5 w-auto block object-contain shrink-0" />
+            <span className="font-mono text-xs font-bold text-[#ff4081] tracking-wider uppercase leading-snug">
               REHEARSE · AI SIMULATION
             </span>
           </div>
         </div>
 
         {/* Live Session Pill */}
-        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff4081]/10 text-[#ff4081] border border-[#ff4081]/25 text-xs font-bold font-mono">
+        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff4081]/10 text-[#ff4081] border border-[#ff4081]/25 text-xs font-bold font-mono shrink-0 whitespace-nowrap">
           <span className="w-2 h-2 rounded-full bg-[#ff4081] animate-pulse" />
           <span>LIVE SESSION</span>
         </div>
@@ -154,18 +154,18 @@ export const SalesSolutionGraphic: React.FC = () => {
     <div className="rounded-[28px] border border-slate-200/90 shadow-2xl overflow-hidden bg-gradient-to-b from-[#fff0f5] via-white to-[#f5fbfd] p-5 sm:p-6 font-sans">
 
       {/* Window Header */}
-      <div className="flex items-center justify-between pb-4 border-b border-slate-200/70 mb-5">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5">
+      <div className="flex items-center justify-between gap-2 flex-wrap pb-4 border-b border-slate-200/70 mb-5">
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="flex items-center gap-1.5 shrink-0">
             <span className="w-3 h-3 rounded-full bg-[#ff5f56]" />
             <span className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
             <span className="w-3 h-3 rounded-full bg-[#27c93f]" />
           </div>
 
-          <div className="h-4 w-px bg-slate-200 mx-1" />
+          <div className="h-4 w-px bg-slate-200 mx-1 shrink-0" />
 
-          <div className="flex items-center gap-2">
-            <span className="font-heading font-black text-lg text-[#ff4081] tracking-tight">
+          <div className="flex items-center gap-x-2 gap-y-0.5 flex-wrap min-w-0">
+            <span className="font-heading font-black text-lg text-[#ff4081] tracking-tight shrink-0">
               SELLIQ
             </span>
             <span className="font-mono text-xs font-bold text-[#008196] tracking-wider uppercase">
@@ -174,7 +174,7 @@ export const SalesSolutionGraphic: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#008196]/10 text-[#008196] border border-[#008196]/25 text-xs font-bold font-mono">
+        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#008196]/10 text-[#008196] border border-[#008196]/25 text-xs font-bold font-mono shrink-0 whitespace-nowrap">
           <span className="w-2 h-2 rounded-full bg-[#008196] animate-pulse" />
           <span>HCP DETAILING ACTIVE</span>
         </div>
@@ -290,25 +290,25 @@ export const OnboardingSolutionGraphic: React.FC = () => {
     <div className="rounded-[28px] border border-slate-200/90 shadow-2xl overflow-hidden bg-gradient-to-b from-[#eaf6f8] via-white to-[#f0f9fa] p-5 sm:p-6 font-sans">
 
       {/* Window Header */}
-      <div className="flex items-center justify-between pb-4 border-b border-slate-200/70 mb-5">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5">
+      <div className="flex items-center justify-between gap-2 flex-wrap pb-4 border-b border-slate-200/70 mb-5">
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="flex items-center gap-1.5 shrink-0">
             <span className="w-3 h-3 rounded-full bg-[#ff5f56]" />
             <span className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
             <span className="w-3 h-3 rounded-full bg-[#27c93f]" />
           </div>
 
-          <div className="h-4 w-px bg-slate-200 mx-1" />
+          <div className="h-4 w-px bg-slate-200 mx-1 shrink-0" />
 
-          <div className="flex items-center gap-2">
-            <img src={logoImg} alt="A3CEND" className="h-5 w-auto block object-contain" />
-            <span className="font-mono text-xs font-bold text-[#008196] tracking-wider uppercase">
+          <div className="flex items-center gap-2 min-w-0">
+            <img src={logoImg} alt="A3CEND" className="h-5 w-auto block object-contain shrink-0" />
+            <span className="font-mono text-xs font-bold text-[#008196] tracking-wider uppercase leading-snug">
               VELOCITY ENGINE
             </span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-300 text-xs font-bold font-mono">
+        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-300 text-xs font-bold font-mono shrink-0 whitespace-nowrap">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span>RAMP: 14 DAYS</span>
         </div>
@@ -383,25 +383,25 @@ export const ComplianceSolutionGraphic: React.FC = () => {
     <div className="rounded-[28px] border border-slate-200/90 shadow-2xl overflow-hidden bg-gradient-to-b from-[#fff0f5] via-white to-[#f0f9fa] p-5 sm:p-6 font-sans">
 
       {/* Window Header */}
-      <div className="flex items-center justify-between pb-4 border-b border-slate-200/70 mb-5">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5">
+      <div className="flex items-center justify-between gap-2 flex-wrap pb-4 border-b border-slate-200/70 mb-5">
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="flex items-center gap-1.5 shrink-0">
             <span className="w-3 h-3 rounded-full bg-[#ff5f56]" />
             <span className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
             <span className="w-3 h-3 rounded-full bg-[#27c93f]" />
           </div>
 
-          <div className="h-4 w-px bg-slate-200 mx-1" />
+          <div className="h-4 w-px bg-slate-200 mx-1 shrink-0" />
 
-          <div className="flex items-center gap-2">
-            <img src={logoImg} alt="A3CEND" className="h-5 w-auto block object-contain" />
-            <span className="font-mono text-xs font-bold text-[#008196] tracking-wider uppercase">
+          <div className="flex items-center gap-2 min-w-0">
+            <img src={logoImg} alt="A3CEND" className="h-5 w-auto block object-contain shrink-0" />
+            <span className="font-mono text-xs font-bold text-[#008196] tracking-wider uppercase leading-snug">
               COMPLIANCE &amp; RISK ENGINE
             </span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-300 text-xs font-bold font-mono">
+        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-300 text-xs font-bold font-mono shrink-0 whitespace-nowrap">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span>100% AUDIT READY</span>
         </div>

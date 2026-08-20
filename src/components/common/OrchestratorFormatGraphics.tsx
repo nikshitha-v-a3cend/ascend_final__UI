@@ -10,16 +10,16 @@ export const ContentOrchestratorHeroGraphic: React.FC = () => {
   return (
     <div className="w-full bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xl text-left">
       {/* Top Browser Header */}
-      <div className="bg-[#002f38] px-4 py-2.5 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <div className="bg-white px-2 py-0.5 rounded shadow-2xs border border-slate-200/80 flex items-center">
+      <div className="bg-[#002f38] px-4 py-2.5 flex items-center justify-between gap-2 flex-wrap">
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="bg-white px-2 py-0.5 rounded shadow-2xs border border-slate-200/80 flex items-center shrink-0">
             <img src={logoImg} alt="A3CEND" className="h-3.5 max-w-[80px] w-auto block object-contain" />
           </div>
-          <span className="font-mono text-xs text-cyan-300 font-bold hidden sm:inline">
+          <span className="font-mono text-xs text-cyan-300 font-bold leading-snug">
             Content Orchestrator · Super-User Console
           </span>
         </div>
-        <span className="px-3 py-1 bg-[#008196] text-white font-extrabold text-[11px] rounded-full uppercase tracking-wider shadow-sm">
+        <span className="px-3 py-1 bg-[#008196] text-white font-extrabold text-[11px] rounded-full uppercase tracking-wider shadow-sm shrink-0 whitespace-nowrap">
           AI Engine Active
         </span>
       </div>
@@ -138,9 +138,9 @@ export const ElearningFormatGraphic: React.FC = () => {
   return (
     <div className="w-full bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-xl text-left">
       {/* Top Header */}
-      <div className="bg-[#002f38] px-4 py-2.5 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <div className="bg-white px-2 py-0.5 rounded shadow-2xs border border-slate-200/80 flex items-center">
+      <div className="bg-[#002f38] px-4 py-2.5 flex items-center justify-between gap-2 flex-wrap">
+        <div className="flex items-center gap-3 min-w-0 shrink-0">
+          <div className="bg-white px-2 py-0.5 rounded shadow-2xs border border-slate-200/80 flex items-center shrink-0">
             <img src={logoImg} alt="A3CEND" className="h-3.5 max-w-[80px] w-auto block object-contain" />
           </div>
           <div className="hidden sm:flex gap-3 text-xs font-bold text-slate-300">
@@ -150,7 +150,7 @@ export const ElearningFormatGraphic: React.FC = () => {
             <span>Help</span>
           </div>
         </div>
-        <span className="text-[10px] font-mono text-cyan-300 font-bold bg-[#004855] px-3 py-1 rounded-full">
+        <span className="text-[10px] font-mono text-cyan-300 font-bold bg-[#004855] px-3 py-1 rounded-full shrink-0 whitespace-nowrap">
           Format 01 · e-Learning Class
         </span>
       </div>
@@ -241,14 +241,14 @@ export const MicroVideoFormatGraphic: React.FC = () => {
   return (
     <div className="w-full bg-[#0c1216] text-white rounded-2xl overflow-hidden border border-slate-800 shadow-xl text-left">
       {/* Studio Header Bar */}
-      <div className="bg-[#141e24] px-4 py-2.5 border-b border-slate-800 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <div className="bg-white px-2 py-0.5 rounded shadow-2xs border border-slate-200/80 flex items-center">
+      <div className="bg-[#141e24] px-4 py-2.5 border-b border-slate-800 flex items-center justify-between gap-2 flex-wrap">
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="bg-white px-2 py-0.5 rounded shadow-2xs border border-slate-200/80 flex items-center shrink-0">
             <img src={logoImg} alt="A3CEND" className="h-3.5 max-w-[80px] w-auto block object-contain" />
           </div>
-          <span className="text-xs font-bold text-slate-200">Studio · Micro-Video Engine</span>
+          <span className="text-xs font-bold text-slate-200 leading-snug">Studio · Micro-Video Engine</span>
         </div>
-        <span className="text-[10px] font-mono text-cyan-400 bg-cyan-950/80 px-3 py-1 rounded-full border border-cyan-800">
+        <span className="text-[10px] font-mono text-cyan-400 bg-cyan-950/80 px-3 py-1 rounded-full border border-cyan-800 shrink-0 whitespace-nowrap">
           Format 02 · 1080p Full HD
         </span>
       </div>

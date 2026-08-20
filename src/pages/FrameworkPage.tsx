@@ -76,34 +76,34 @@ export const FrameworkPage: React.FC = () => {
             </div>
 
             {/* Bottom 3 Stat Pills */}
-            <div className="mt-10 pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-3 max-w-[480px]">
-              <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-3 shadow-sm">
+            <div className="mt-10 pt-8 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-[480px]">
+              <div className="flex items-center gap-3 bg-white border border-slate-200 rounded-2xl p-3 shadow-sm">
                 <div className="w-10 h-10 rounded-xl bg-[#008196]/10 text-[#008196] flex items-center justify-center font-bold text-lg">
                   📋
                 </div>
                 <div>
                   <div className="font-heading font-black text-lg leading-none text-ink-900">35</div>
-                  <div className="text-[11px] text-slate-500 font-medium mt-0.5">Assessed Skills</div>
+                  <div className="text-[11px] text-slate-600 font-semibold mt-0.5">Assessed Skills</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-3 shadow-sm">
+              <div className="flex items-center gap-3 bg-white border border-slate-200 rounded-2xl p-3 shadow-sm">
                 <div className="w-10 h-10 rounded-xl bg-[#ff4081]/10 text-[#ff4081] flex items-center justify-center font-bold text-lg">
                   📊
                 </div>
                 <div>
                   <div className="font-heading font-black text-lg leading-none text-ink-900">200+</div>
-                  <div className="text-[11px] text-slate-500 font-medium mt-0.5">Dimensions</div>
+                  <div className="text-[11px] text-slate-600 font-semibold mt-0.5">Dimensions</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-3 shadow-sm">
+              <div className="flex items-center gap-3 bg-white border border-slate-200 rounded-2xl p-3 shadow-sm">
                 <div className="w-10 h-10 rounded-xl bg-[#008196]/10 text-[#008196] flex items-center justify-center font-bold text-lg">
                   🌐
                 </div>
                 <div>
                   <div className="font-heading font-black text-lg leading-none text-ink-900">6</div>
-                  <div className="text-[11px] text-slate-500 font-medium mt-0.5">Cultural Presets</div>
+                  <div className="text-[11px] text-slate-600 font-semibold mt-0.5">Cultural Presets</div>
                 </div>
               </div>
             </div>
@@ -114,13 +114,13 @@ export const FrameworkPage: React.FC = () => {
           <div className="relative">
             
             {/* Floating Level Badge Overlay */}
-            <div className="absolute -top-4 -right-2 z-20 bg-white/95 backdrop-blur-md border border-[#008196]/30 p-3.5 rounded-2xl shadow-xl flex items-center gap-3 animate-floatSm">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-[#008196] to-[#04aac4] flex items-center justify-center font-heading font-black text-sm text-white shadow-sm">
+            <div className="absolute -top-4 -right-2 z-20 hidden sm:flex items-center gap-3 bg-white/95 backdrop-blur-md border border-[#008196]/30 p-3.5 rounded-2xl shadow-xl animate-floatSm">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-[#008196] to-[#04aac4] flex items-center justify-center font-heading font-black text-sm text-white shadow-sm shrink-0">
                 L4
               </div>
-              <div>
-                <div className="font-heading font-extrabold text-xs text-ink-900">Mastery Level</div>
-                <div className="text-[11px] text-slate-500">Tracked against framework</div>
+              <div className="min-w-0">
+                <div className="font-heading font-extrabold text-xs text-ink-900 whitespace-nowrap">Mastery Level</div>
+                <div className="text-[11px] text-slate-500 whitespace-nowrap">Tracked against framework</div>
               </div>
             </div>
 
@@ -131,9 +131,9 @@ export const FrameworkPage: React.FC = () => {
                 <h3 className="font-heading font-black text-lg text-ink-900">
                   Competency Framework Matrix
                 </h3>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-slate-400">Domain</span>
-                  <div className="relative">
+                <div className="flex items-center gap-2 overflow-x-auto flex-nowrap w-full sm:w-auto -mx-1 px-1 sm:mx-0 sm:px-0 pb-1 sm:pb-0">
+                  <span className="text-xs font-bold text-slate-400 shrink-0">Domain</span>
+                  <div className="relative shrink-0">
                     <select
                       value={activeLibraryIndex}
                       onChange={(e) => setActiveLibraryIndex(Number(e.target.value))}
@@ -151,7 +151,7 @@ export const FrameworkPage: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setIsEditing(!isEditing)}
-                    className={`px-3.5 py-1.5 rounded-full text-xs font-bold border transition-all ${
+                    className={`shrink-0 whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-bold border transition-all ${
                       isEditing
                         ? 'bg-[#ff4081] text-white border-[#ff4081] shadow-sm animate-pulse'
                         : 'bg-[#008196]/10 text-[#008196] border-[#008196]/20 hover:bg-[#008196]/20'
@@ -162,97 +162,102 @@ export const FrameworkPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Table Header Columns */}
-              <div className="grid grid-cols-[1.2fr_1fr_1fr_1.1fr_1fr] gap-2 pt-4 pb-2 px-2 text-center text-xs font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100">
-                <div className="text-left font-bold text-slate-500">Skill Domain</div>
-                <div>
-                  <div className="text-slate-700 font-extrabold">L1</div>
-                  <div className="text-[10px] text-slate-400 lowercase">Baseline</div>
-                </div>
-                <div>
-                  <div className="text-slate-700 font-extrabold">L2</div>
-                  <div className="text-[10px] text-slate-400 lowercase">Developing</div>
-                </div>
-                <div className="bg-[#eef9fb] text-[#008196] py-1 rounded-t-lg font-black border-t-2 border-[#008196]">
-                  <div>L3</div>
-                  <div className="text-[10px] text-[#008196] lowercase">Proficient</div>
-                </div>
-                <div>
-                  <div className="text-slate-700 font-extrabold">L4</div>
-                  <div className="text-[10px] text-slate-400 lowercase">Mastery</div>
-                </div>
-              </div>
-
-              {/* Skill Groups & Rows */}
-              <div className="divide-y divide-slate-100">
-                {currentSkillsData.map((group, idx) => {
-                  const icons = ['💬', '🔥', '🎯', '⚙️'];
-                  return (
-                    <div key={group.category} className="py-3">
-                      <div className="flex items-center gap-1.5 text-[11px] font-mono font-extrabold uppercase tracking-widest text-[#008196] mb-2 px-2">
-                        <span>{icons[idx % icons.length]}</span>
-                        <span>{group.category}</span>
-                      </div>
-                      <div className="space-y-2">
-                        {group.skills.map((sk) => (
-                          <div
-                            key={sk.name}
-                            onClick={() => handleRowClick(sk.name)}
-                            className={`grid grid-cols-[1.2fr_1fr_1fr_1.1fr_1fr] gap-2 items-center px-2 py-1.5 rounded-xl transition-colors ${
-                              isEditing ? 'hover:bg-[#008196]/10 cursor-pointer border border-dashed border-[#008196]/30' : 'hover:bg-slate-50'
-                            }`}
-                          >
-                            <span className="text-xs font-semibold text-slate-700 leading-tight">
-                              {sk.name}
-                            </span>
-
-                            {/* L1 bar */}
-                            <div className="flex justify-center">
-                              <div className="w-10 h-2.5 rounded-full bg-slate-100" />
-                            </div>
-
-                            {/* L2 bar */}
-                            <div className="flex justify-center">
-                              <div className="w-10 h-2.5 rounded-full bg-slate-100" />
-                            </div>
-
-                            {/* L3 badge */}
-                            <div className="flex justify-center bg-[#eef9fb]/70 py-1">
-                              <span className={`px-2.5 py-1 rounded-md text-[10px] font-bold shadow-xs whitespace-nowrap ${
-                                sk.isL4 ? 'bg-slate-100 text-slate-400' : 'bg-[#008196] text-white'
-                              }`}>
-                                L3 Proficient
-                              </span>
-                            </div>
-
-                            {/* L4 badge */}
-                            <div className="flex justify-center">
-                              {sk.isL4 ? (
-                                <span className="px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[10px] font-bold shadow-xs whitespace-nowrap">
-                                  L4 Mastery
-                                </span>
-                              ) : (
-                                <div className="w-10 h-2.5 rounded-full bg-slate-100" />
-                              )}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
+              {/* Scrollable Container Wrapper for Mobile Responsive Legibility */}
+              <div className="overflow-x-auto -mx-6 px-6">
+                <div className="min-w-[580px] sm:min-w-0">
+                  {/* Table Header Columns */}
+                  <div className="grid grid-cols-[1.2fr_1fr_1fr_1.1fr_1fr] gap-2 pt-4 pb-2 px-2 text-center text-xs font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100">
+                    <div className="text-left font-bold text-slate-500">Skill Domain</div>
+                    <div>
+                      <div className="text-slate-700 font-extrabold">L1</div>
+                      <div className="text-[10px] text-slate-400 lowercase">Baseline</div>
                     </div>
-                  );
-                })}
-              </div>
+                    <div>
+                      <div className="text-slate-700 font-extrabold">L2</div>
+                      <div className="text-[10px] text-slate-400 lowercase">Developing</div>
+                    </div>
+                    <div className="bg-[#eef9fb] text-[#008196] py-1 rounded-t-lg font-black border-t-2 border-[#008196]">
+                      <div>L3</div>
+                      <div className="text-[10px] text-[#008196] lowercase">Proficient</div>
+                    </div>
+                    <div>
+                      <div className="text-slate-700 font-extrabold">L4</div>
+                      <div className="text-[10px] text-slate-400 lowercase">Mastery</div>
+                    </div>
+                  </div>
 
-              {/* Table Footer */}
-              <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-mono text-slate-500 px-2">
-                <span><strong className="text-slate-700 font-bold">Levels:</strong> L1 · L2 · <span className="text-[#008196] font-bold">L3 Proficient</span> · L4</span>
-                <button
-                  type="button"
-                  onClick={() => setShowFullTaxonomyModal(true)}
-                  className="text-[11px] text-[#008196] font-bold hover:underline"
-                >
-                  Full taxonomy matrix →
-                </button>
+                  {/* Skill Groups & Rows */}
+                  <div className="divide-y divide-slate-100">
+                    {currentSkillsData.map((group, idx) => {
+                      const icons = ['💬', '🔥', '🎯', '⚙️'];
+                      return (
+                        <div key={group.category} className="py-3">
+                          <div className="flex items-center gap-1.5 text-[11px] font-mono font-extrabold uppercase tracking-widest text-[#008196] mb-2 px-2">
+                            <span>{icons[idx % icons.length]}</span>
+                            <span>{group.category}</span>
+                          </div>
+                          <div className="space-y-2">
+                            {group.skills.map((sk) => (
+                              <div
+                                key={sk.name}
+                                onClick={() => handleRowClick(sk.name)}
+                                className={`grid grid-cols-[1.2fr_1fr_1fr_1.1fr_1fr] gap-2 items-center px-2 py-1.5 rounded-xl transition-colors ${
+                                  isEditing ? 'hover:bg-[#008196]/10 cursor-pointer border border-dashed border-[#008196]/30' : 'hover:bg-slate-50'
+                                }`}
+                              >
+                                <span className="text-xs font-semibold text-slate-700 leading-tight">
+                                  {sk.name}
+                                </span>
+
+                                {/* L1 bar */}
+                                <div className="flex justify-center">
+                                  <div className="w-10 h-2.5 rounded-full bg-slate-100" />
+                                </div>
+
+                                {/* L2 bar */}
+                                <div className="flex justify-center">
+                                  <div className="w-10 h-2.5 rounded-full bg-slate-100" />
+                                </div>
+
+                                {/* L3 badge */}
+                                <div className="flex justify-center bg-[#eef9fb]/70 py-1">
+                                  <span className={`px-2.5 py-1 rounded-md text-[10px] font-bold shadow-xs whitespace-nowrap ${
+                                    sk.isL4 ? 'bg-slate-100 text-slate-400' : 'bg-[#008196] text-white'
+                                  }`}>
+                                    L3 Proficient
+                                  </span>
+                                </div>
+
+                                {/* L4 badge */}
+                                <div className="flex justify-center">
+                                  {sk.isL4 ? (
+                                    <span className="px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[10px] font-bold shadow-xs whitespace-nowrap">
+                                      L4 Mastery
+                                    </span>
+                                  ) : (
+                                    <div className="w-10 h-2.5 rounded-full bg-slate-100" />
+                                  )}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* Table Footer */}
+                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-mono text-slate-500 px-2">
+                    <span><strong className="text-slate-700 font-bold">Levels:</strong> L1 · L2 · <span className="text-[#008196] font-bold">L3 Proficient</span> · L4</span>
+                    <button
+                      type="button"
+                      onClick={() => setShowFullTaxonomyModal(true)}
+                      className="text-[11px] text-[#008196] font-bold hover:underline"
+                    >
+                      Full taxonomy matrix →
+                    </button>
+                  </div>
+                </div>
               </div>
 
             </div>
@@ -328,7 +333,7 @@ export const FrameworkPage: React.FC = () => {
                             <div className={`text-sm font-extrabold leading-tight ${isSelected ? 'text-[#008196]' : 'text-slate-800'}`}>
                               {lib.name}
                             </div>
-                            <div className="text-[11px] text-slate-500 font-medium mt-0.5 leading-snug">
+                            <div className="text-[11px] text-slate-600 font-semibold mt-0.5 leading-snug">
                               {lib.subtitle}
                             </div>
                           </div>

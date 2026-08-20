@@ -10,8 +10,8 @@ export const ContentOrchestratorMockup: React.FC = () => {
   return (
     <div className="w-full bg-[#f4f8fa] rounded-2xl overflow-hidden border border-brand-600/20 shadow-xl text-left">
       {/* Top Header Bar with Official Logo */}
-      <div className="bg-white px-4 py-3 border-b border-slate-200/80 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
+      <div className="bg-white px-4 py-3 border-b border-slate-200/80 flex items-center justify-between gap-2 flex-wrap">
+        <div className="flex items-center gap-3 shrink-0">
           <div className="flex gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
@@ -19,12 +19,9 @@ export const ContentOrchestratorMockup: React.FC = () => {
           </div>
           <div className="h-4 w-px bg-slate-200" />
           <img src={logoImg} alt="A3CEND" className="h-5 w-auto block object-contain" />
-          <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider hidden sm:inline">
-            Content Orchestrator
-          </span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="px-2.5 py-0.5 bg-[#e3f5f8] text-[#008196] font-extrabold text-[10px] rounded-full uppercase">
+        <div className="flex items-center gap-2 shrink-0">
+          <span className="px-2.5 py-0.5 bg-[#e3f5f8] text-[#008196] font-extrabold text-[10px] rounded-full uppercase whitespace-nowrap">
             Super-User Mode
           </span>
         </div>
@@ -122,8 +119,8 @@ export const RehearseSimulationMockup: React.FC = () => {
   return (
     <div className="w-full bg-[#fdf8fa] rounded-2xl overflow-hidden border border-coral-500/20 shadow-xl text-left">
       {/* Top Header Bar with Official Logo */}
-      <div className="bg-white px-4 py-3 border-b border-slate-200/80 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
+      <div className="bg-white px-4 py-3 border-b border-slate-200/80 flex items-center justify-between gap-2 flex-wrap">
+        <div className="flex items-center gap-3 shrink-0">
           <div className="flex gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
@@ -131,13 +128,10 @@ export const RehearseSimulationMockup: React.FC = () => {
           </div>
           <div className="h-4 w-px bg-slate-200" />
           <img src={logoImg} alt="A3CEND" className="h-5 w-auto block object-contain" />
-          <span className="text-[11px] font-bold text-coral-500 uppercase tracking-wider hidden sm:inline">
-            REHEARSE · AI Simulation
-          </span>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <div className="a3-live-dot" />
-          <span className="font-mono font-extrabold text-[10px] text-coral-500 uppercase">Live Session</span>
+          <span className="font-mono font-extrabold text-[10px] text-coral-500 uppercase whitespace-nowrap">Live Session</span>
         </div>
       </div>
 

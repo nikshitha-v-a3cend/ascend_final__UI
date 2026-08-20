@@ -106,20 +106,20 @@ export const HomePage: React.FC = () => {
                 <img src={heroUiImg} alt="A3CEND Platform UI" className="w-full h-auto block" />
               </div>
               {/* Live Badge */}
-              <div className="absolute -top-3 -right-3 bg-white/95 backdrop-blur-md border border-brand-600/20 px-4 py-2.5 rounded-2xl flex items-center gap-2.5 shadow-lg animate-floatSm">
-                <div className="a3-live-dot" />
-                <span className="font-heading font-bold text-xs text-brand-600">AI Avatar Active</span>
+              <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 bg-white/95 backdrop-blur-md border border-brand-600/20 px-2.5 py-1.5 sm:px-4 sm:py-2.5 rounded-2xl flex items-center gap-1.5 sm:gap-2.5 shadow-lg animate-floatSm">
+                <div className="a3-live-dot shrink-0" />
+                <span className="font-heading font-bold text-[10px] sm:text-xs text-brand-600 whitespace-nowrap">AI Avatar Active</span>
               </div>
               {/* Readiness Score Badge */}
-              <div className="absolute -bottom-4 -left-3 bg-white/95 backdrop-blur-md border border-brand-600/20 px-4 py-3 rounded-2xl flex items-center gap-3 shadow-lg animate-floatSm">
-                <div className="w-10 h-10 rounded-full bg-[conic-gradient(#008196_92%,rgba(0,129,150,0.12)_0)] flex items-center justify-center">
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center font-heading font-black text-xs text-brand-600">
+              <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-3 max-w-[calc(100%-1rem)] bg-white/95 backdrop-blur-md border border-brand-600/20 px-2.5 py-2 sm:px-4 sm:py-3 rounded-2xl flex items-center gap-2 sm:gap-3 shadow-lg animate-floatSm">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[conic-gradient(#008196_92%,rgba(0,129,150,0.12)_0)] flex items-center justify-center shrink-0">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center font-heading font-black text-[10px] sm:text-xs text-brand-600">
                     92%
                   </div>
                 </div>
-                <div>
-                  <div className="font-heading font-extrabold text-xs text-ink-900">Readiness Score</div>
-                  <div className="text-[11px] text-slate-500">Real-time AI scoring</div>
+                <div className="min-w-0">
+                  <div className="font-heading font-extrabold text-[11px] sm:text-xs text-ink-900 whitespace-nowrap">Readiness Score</div>
+                  <div className="text-[9px] sm:text-[11px] text-slate-500 whitespace-nowrap">Real-time AI scoring</div>
                 </div>
               </div>
             </div>
