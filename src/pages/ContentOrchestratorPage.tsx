@@ -92,6 +92,68 @@ export const ContentOrchestratorPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Manager & Leadership Development Solution */}
+            <div id="leadership" className="a3-glass-card rounded-[28px] p-8 border-t-4 border-brand-600 bg-white shadow-lg flex flex-col justify-between scroll-mt-24">
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="font-archivo text-xs font-bold tracking-widest uppercase text-brand-600">SOLUTION 01</span>
+                  <span className="a3-tag a3-tag--teal">LEADERSHIP</span>
+                </div>
+                <h3 className="mt-4 text-2xl font-black text-ink-900">Manager &amp; Leadership Development</h3>
+                <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                  High-stakes leadership conversation readiness. Ingest executive program decks and coaching playbooks to generate scenario-based modules and manager readiness scorecards for every cohort.
+                </p>
+                <div className="mt-6 space-y-2.5">
+                  <div className="flex items-center gap-2 text-xs font-semibold text-ink-900">
+                    <span className="w-5 h-5 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-xs">✓</span>
+                    Faster time-to-competency for new managers
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-ink-900">
+                    <span className="w-5 h-5 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-xs">✓</span>
+                    Consistent leadership frameworks across cohorts
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-ink-900">
+                    <span className="w-5 h-5 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-xs">✓</span>
+                    Manager readiness scorecards, auto-generated
+                  </div>
+                </div>
+              </div>
+              <Link to="/try/live-presenter" className="mt-8 a3-btn a3-btn-teal w-full text-center font-bold text-sm py-3">
+                Try Leadership Generator →
+              </Link>
+            </div>
+
+            {/* Sales & Customer Conversations Solution */}
+            <div id="sales" className="a3-glass-card rounded-[28px] p-8 border-t-4 border-coral-500 bg-white shadow-lg flex flex-col justify-between scroll-mt-24">
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="font-archivo text-xs font-bold tracking-widest uppercase text-coral-500">SOLUTION 02</span>
+                  <span className="a3-tag a3-tag--coral">SALES</span>
+                </div>
+                <h3 className="mt-4 text-2xl font-black text-ink-900">Sales &amp; Customer Conversations</h3>
+                <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                  Objection handling &amp; commercial detailing. Ingest battlecards and pitch decks to generate role-specific micro-modules and objection-handling drills for every rep.
+                </p>
+                <div className="mt-6 space-y-2.5">
+                  <div className="flex items-center gap-2 text-xs font-semibold text-ink-900">
+                    <span className="w-5 h-5 rounded-full bg-coral-50 text-coral-500 flex items-center justify-center font-bold text-xs">✓</span>
+                    Faster ramp-up for new sales hires
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-ink-900">
+                    <span className="w-5 h-5 rounded-full bg-coral-50 text-coral-500 flex items-center justify-center font-bold text-xs">✓</span>
+                    Always-current objection-handling playbooks
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-ink-900">
+                    <span className="w-5 h-5 rounded-full bg-coral-50 text-coral-500 flex items-center justify-center font-bold text-xs">✓</span>
+                    Rep-level readiness tracking by product line
+                  </div>
+                </div>
+              </div>
+              <Link to="/try/live-presenter" className="mt-8 a3-btn a3-btn-coral w-full text-center font-bold text-sm py-3">
+                Try Sales Generator →
+              </Link>
+            </div>
+
             {/* Onboarding & Induction Solution */}
             <div id="onboarding" className="a3-glass-card rounded-[28px] p-8 border-t-4 border-brand-600 bg-white shadow-lg flex flex-col justify-between scroll-mt-24">
               <div>

@@ -45,7 +45,7 @@ export const TryItWorkbench: React.FC<TryItWorkbenchProps> = ({
       nudge: "Validate his effort first before clarifying baseline project ownership goals.",
     },
     skeptical: {
-      quote: `"Dr. Ramesh: Phase III data is one thing. What is the NNT for my elderly patients with comorbidities?"`,
+      quote: `"The physician: Phase III data is one thing. What is the NNT for my elderly patients with comorbidities?"`,
       nudge: "Address the specific patient population NNT constraint before citing trial endpoint efficacy.",
     },
     peer_conflict: {
@@ -97,7 +97,7 @@ export const TryItWorkbench: React.FC<TryItWorkbenchProps> = ({
 
   // Simulation Timer
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setInterval>;
     if (simStage === 'active') {
       timer = setInterval(() => {
         setSimClock((prev) => prev + 1);
