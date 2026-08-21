@@ -38,7 +38,7 @@ export const CookiePolicyPage: React.FC = () => {
             Cookie Policy
           </h1>
           <p className="mt-3 text-sm md:text-base text-slate-600">
-            Last Updated: August 21, 2026 · Effective Date: January 1, 2026
+            Last updated: August 2026
           </p>
         </div>
       </section>
