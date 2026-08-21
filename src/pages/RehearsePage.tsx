@@ -114,10 +114,7 @@ export const RehearsePage: React.FC = () => {
             {/* Leadership Development Solution */}
             <div id="leadership" className="a3-glass-card rounded-[28px] p-8 border-t-4 border-brand-600 bg-white shadow-lg flex flex-col justify-between scroll-mt-24">
               <div>
-                <div className="flex items-center justify-between">
-                  <span className="font-archivo text-xs font-bold tracking-widest uppercase text-brand-600">SOLUTION 01</span>
-                  <span className="a3-tag a3-tag--teal">LEADERSHIP</span>
-                </div>
+                <span className="a3-tag a3-tag--teal">LEADERSHIP</span>
                 <h3 className="mt-4 text-2xl font-black text-ink-900">Manager &amp; Leadership Development</h3>
                 <p className="mt-3 text-sm text-slate-600 leading-relaxed">
                   Prepare managers for high-friction conversations before they meet real employees. Rehearse performance rating pushbacks, cross-functional conflicts, and team accountability turn-by-turn.
@@ -145,10 +142,7 @@ export const RehearsePage: React.FC = () => {
             {/* Sales & Customer Conversations Solution */}
             <div id="sales" className="a3-glass-card rounded-[28px] p-8 border-t-4 border-coral-500 bg-white shadow-lg flex flex-col justify-between scroll-mt-24">
               <div>
-                <div className="flex items-center justify-between">
-                  <span className="font-archivo text-xs font-bold tracking-widest uppercase text-coral-500">SOLUTION 02</span>
-                  <span className="a3-tag a3-tag--coral">COMMERCIAL</span>
-                </div>
+                <span className="a3-tag a3-tag--coral">COMMERCIAL</span>
                 <h3 className="mt-4 text-2xl font-black text-ink-900">Sales &amp; Customer Conversations</h3>
                 <p className="mt-3 text-sm text-slate-600 leading-relaxed">
                   Train commercial and field sales teams on complex objection handling, physician detailing, price negotiation, and value storytelling against dynamic AI buyers.
