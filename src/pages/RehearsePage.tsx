@@ -135,7 +135,7 @@ export const RehearsePage: React.FC = () => {
                 </div>
               </div>
               <Link to="/try/simulation" className="mt-8 a3-btn a3-btn-teal w-full text-center font-bold text-sm py-3">
-                Try Leadership Simulation →
+                Try a simulation free →
               </Link>
             </div>
 
@@ -163,7 +163,7 @@ export const RehearsePage: React.FC = () => {
                 </div>
               </div>
               <Link to="/try/simulation" className="mt-8 a3-btn a3-btn-coral w-full text-center font-bold text-sm py-3">
-                Try Sales Simulation →
+                Try a simulation free →
               </Link>
             </div>
           </div>

@@ -4,17 +4,13 @@ import { HeroParticleCanvas } from '@/components/common/HeroParticleCanvas';
 import { BottomCtaBanner } from '@/components/common/BottomCtaBanner';
 import { ApproachInteractiveCycle } from '@/components/interactive/ApproachInteractiveCycle';
 import { BRANDS } from '@/data/homeData';
-import logoImg from '@/assets/a3cend-logo-crop.png';
 
 import heroUiImg from '@/assets/hero-platform-ui.png';
-import trustedLogosImg from '@/assets/trusted-logos.png';
 import livePresenterImg from '@/assets/img-live-presenter-ui.jpg';
 import simulationImg from '@/assets/img-simulation-ui.jpg';
 import contentOrchCleanImg from '@/assets/img-content-orchestrator-clean.svg';
-import contentOrchImg from '@/assets/img-content-orchestrator.png';
 import rehearseImg from '@/assets/img-rehearse.png';
 import skillFrameworkCleanImg from '@/assets/img-skill-framework-clean.svg';
-import skillFrameworkImg from '@/assets/img-skill-framework-ui.jpg';
 import analyticsDashboardCroppedImg from '@/assets/img-analytics-dashboard-cropped.svg';
 import { ContentVisualHeader, ContextVisualHeader, CoachingVisualHeader } from '@/components/common/ThreeCVisuals';
 import { ContentOrchestratorMockup, RehearseSimulationMockup } from '@/components/common/PlatformCardMockups';
@@ -129,11 +125,10 @@ export const HomePage: React.FC = () => {
 
       {/* TRUSTED CLIENTS MARQUEE */}
       <section className="bg-white py-8 border-y border-slate-100 overflow-hidden">
-        <div className="max-w-[1320px] mx-auto px-6 md:px-12 flex items-center gap-5 mb-4">
-          <span className="text-xs font-bold text-slate-400 tracking-widest uppercase whitespace-nowrap shrink-0">
+        <div className="max-w-[1320px] mx-auto px-6 md:px-12 mb-4">
+          <span className="text-xs font-bold text-slate-400 tracking-widest uppercase whitespace-nowrap">
             Trusted by global enterprises
           </span>
-          <img src={trustedLogosImg} alt="Trusted logos" className="max-h-8 object-contain opacity-65" />
         </div>
 
         <div className="w-full overflow-hidden relative [mask-image:linear-gradient(90deg,transparent,#000_10%,#000_90%,transparent)]">
@@ -233,7 +228,7 @@ export const HomePage: React.FC = () => {
               </div>
 
               <span className="mt-6 inline-flex items-center gap-1.5 font-extrabold text-base text-[#008196] group-hover:gap-3 transition-all duration-200">
-                Try it free →
+                Try the content engine free →
               </span>
             </Link>
 
@@ -255,7 +250,7 @@ export const HomePage: React.FC = () => {
               </div>
 
               <span className="mt-6 inline-flex items-center gap-1.5 font-extrabold text-base text-[#ff4081] group-hover:gap-3 transition-all duration-200">
-                Try it free →
+                Try a simulation free →
               </span>
             </Link>
           </div>
@@ -341,9 +336,9 @@ export const HomePage: React.FC = () => {
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-7">
-            {/* Content C Card (Custom Fitted Visual Header) */}
+            {/* Content C Card */}
             <div className="rounded-[26px] overflow-hidden shadow-lg border border-slate-200/80 bg-white flex flex-col justify-between group a3-card-anim a3-scroll-reveal a3-delay-1">
-              <div className="h-[200px] relative overflow-hidden border-b border-[#c2ecf2]">
+              <div className="h-[220px] relative overflow-hidden border-b border-[#c2ecf2]">
                 <ContentVisualHeader />
                 <span className="absolute top-4 left-4 bg-[#008196] text-white font-archivo text-[10px] font-black tracking-widest px-3.5 py-1 rounded-full uppercase shadow-md z-10">
                   CONTENT
@@ -363,9 +358,9 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Context C Card (Custom Fitted Visual Header) */}
+            {/* Context C Card */}
             <div className="rounded-[26px] overflow-hidden shadow-lg border border-slate-200/80 bg-white flex flex-col justify-between group a3-card-anim a3-scroll-reveal a3-delay-2">
-              <div className="h-[200px] relative overflow-hidden border-b border-[#c2ecf2]">
+              <div className="h-[220px] relative overflow-hidden border-b border-[#c2ecf2]">
                 <ContextVisualHeader />
                 <span className="absolute top-4 left-4 bg-[#008196] text-white font-archivo text-[10px] font-black tracking-widest px-3.5 py-1 rounded-full uppercase shadow-md z-10">
                   CONTEXT
@@ -385,9 +380,9 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Coaching C Card (Custom Fitted Visual Header) */}
+            {/* Coaching C Card */}
             <div className="rounded-[26px] overflow-hidden shadow-lg border border-slate-200/80 bg-white flex flex-col justify-between group a3-card-anim a3-scroll-reveal a3-delay-3">
-              <div className="h-[200px] relative overflow-hidden border-b border-[#ffd2dd]">
+              <div className="h-[220px] relative overflow-hidden border-b border-[#ffd2dd]">
                 <CoachingVisualHeader />
                 <span className="absolute top-4 left-4 bg-[#ff4081] text-white font-archivo text-[10px] font-black tracking-widest px-3.5 py-1 rounded-full uppercase shadow-md z-10">
                   COACHING
@@ -552,7 +547,7 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
 
-          {/* THE INTEGRATED LEARNING OS (SOLID DARK TEAL CARD BLOCK - MATCHING TARGET SCREENSHOT 2/3) */}
+          {/* THE INTEGRATED LEARNING OS */}
           <div className="mt-12 bg-gradient-to-r from-[#003c46] via-[#004a56] to-[#005868] text-white rounded-[28px] p-8 md:p-12 shadow-2xl">
             <div className="a3-eyebrow text-brand-400">THE INTEGRATED LEARNING OS</div>
             <h3 className="mt-2 text-2xl md:text-3xl font-black text-white">

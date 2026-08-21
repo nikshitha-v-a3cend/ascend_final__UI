@@ -116,7 +116,7 @@ export const ContentOrchestratorPage: React.FC = () => {
                 </div>
               </div>
               <Link to="/try/live-presenter" className="mt-8 a3-btn a3-btn-teal w-full text-center font-bold text-sm py-3">
-                Try Onboarding Generator →
+                Try the content engine free →
               </Link>
             </div>
 
@@ -144,7 +144,7 @@ export const ContentOrchestratorPage: React.FC = () => {
                 </div>
               </div>
               <Link to="/try/live-presenter" className="mt-8 a3-btn a3-btn-coral w-full text-center font-bold text-sm py-3">
-                Try Policy Generator →
+                Try the content engine free →
               </Link>
             </div>
           </div>

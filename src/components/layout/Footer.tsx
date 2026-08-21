@@ -293,7 +293,20 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-6 border-t border-brand-600/10 flex flex-col items-center gap-3 text-center text-xs text-slate-500 font-medium">
-          <span className="flex items-start gap-1.5 justify-center">
+          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-xs font-semibold text-slate-600">
+            <Link to="/privacy-policy" className="hover:text-brand-600 transition-colors">
+              Privacy Policy
+            </Link>
+            <span>·</span>
+            <Link to="/terms-of-service" className="hover:text-brand-600 transition-colors">
+              Terms of Service
+            </Link>
+            <span>·</span>
+            <Link to="/cookie-policy" className="hover:text-brand-600 transition-colors">
+              Cookie Policy
+            </Link>
+          </div>
+          <span className="flex items-start gap-1.5 justify-center mt-1">
             <span className="text-coral-500 shrink-0">📍</span>
             T-Hub, Hyderabad Knowledge City, Telangana 500081, India
           </span>

@@ -187,11 +187,10 @@ export const TryItWorkbench: React.FC<TryItWorkbenchProps> = ({
                         key={pt.id}
                         type="button"
                         onClick={() => setPresenterTopic(pt.id)}
-                        className={`w-full text-left p-4 rounded-xl border flex items-center justify-between transition-all ${
-                          isSelected
+                        className={`w-full text-left p-4 rounded-xl border flex items-center justify-between transition-all ${isSelected
                             ? 'border-brand-600 bg-brand-50/60 shadow-sm'
                             : 'border-slate-200 hover:border-slate-300'
-                        }`}
+                          }`}
                       >
                         <div>
                           <div className="font-bold text-sm text-ink-900">{pt.label}</div>
@@ -215,11 +214,10 @@ export const TryItWorkbench: React.FC<TryItWorkbenchProps> = ({
                         key={ao.id}
                         type="button"
                         onClick={() => setPresenterAudience(ao.id)}
-                        className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                          presenterAudience === ao.id
+                        className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${presenterAudience === ao.id
                             ? 'bg-brand-600 text-white shadow-sm'
                             : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                        }`}
+                          }`}
                       >
                         {ao.label}
                       </button>
@@ -322,11 +320,10 @@ export const TryItWorkbench: React.FC<TryItWorkbenchProps> = ({
                         key={sp.id}
                         type="button"
                         onClick={() => setSimPersona(sp.id)}
-                        className={`text-left p-5 rounded-2xl border transition-all flex flex-col justify-between ${
-                          isSelected
+                        className={`text-left p-5 rounded-2xl border transition-all flex flex-col justify-between ${isSelected
                             ? 'border-brand-600 bg-brand-50/60 shadow-md ring-2 ring-brand-600/20'
                             : 'border-slate-200 hover:border-slate-300 bg-white'
-                        }`}
+                          }`}
                       >
                         <div>
                           <span className="a3-tag a3-tag--teal text-[9px] mb-2 inline-block">{sp.tag}</span>
@@ -349,11 +346,10 @@ export const TryItWorkbench: React.FC<TryItWorkbenchProps> = ({
                         key={sl.id}
                         type="button"
                         onClick={() => setSimLevel(sl.id)}
-                        className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                          simLevel === sl.id
+                        className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${simLevel === sl.id
                             ? 'bg-brand-600 text-white shadow-sm'
                             : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                        }`}
+                          }`}
                       >
                         {sl.label}
                       </button>
@@ -523,7 +519,7 @@ export const TryItWorkbench: React.FC<TryItWorkbenchProps> = ({
                 <div className="max-w-[500px] mx-auto text-center">
                   <h3 className="font-heading font-black text-2xl text-ink-900">Unlock your full scorecard</h3>
                   <p className="mt-2 text-sm text-slate-600">Enter your email to receive your full PDF analysis &amp; skill breakdown.</p>
-                  
+
                   {!emailSubmitted ? (
                     <form
                       onSubmit={(e) => {

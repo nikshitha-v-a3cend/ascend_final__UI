@@ -22,6 +22,11 @@ import { SalesSolutionPage } from '@/pages/solutions/SalesSolutionPage';
 import { OnboardingSolutionPage } from '@/pages/solutions/OnboardingSolutionPage';
 import { ComplianceSolutionPage } from '@/pages/solutions/ComplianceSolutionPage';
 
+import { PrivacyPolicyPage } from '@/pages/PrivacyPolicyPage';
+import { TermsOfServicePage } from '@/pages/TermsOfServicePage';
+import { CookiePolicyPage } from '@/pages/CookiePolicyPage';
+import { CookieConsentBanner } from '@/components/common/CookieConsentBanner';
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -75,9 +80,18 @@ export const App: React.FC = () => {
             <Route path="/solutions/sales" element={<SalesSolutionPage />} />
             <Route path="/solutions/onboarding" element={<OnboardingSolutionPage />} />
             <Route path="/solutions/compliance" element={<ComplianceSolutionPage />} />
+
+            {/* Legal & Compliance Pages */}
+            <Route path="/privacy" element={<PrivacyPolicyPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms" element={<TermsOfServicePage />} />
+            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+            <Route path="/cookies" element={<CookiePolicyPage />} />
+            <Route path="/cookie-policy" element={<CookiePolicyPage />} />
           </Routes>
         </main>
         <Footer />
+        <CookieConsentBanner />
       </div>
     </QueryClientProvider>
   );

@@ -12,7 +12,7 @@ export const AnnouncementBanner: React.FC = () => {
         to="/rehearse"
         className="text-[#c2f0f7] font-extrabold underline underline-offset-2 hover:text-white transition-colors"
       >
-        Explore REHEARSE →
+        Explore now →
       </Link>
     </div>
   );
