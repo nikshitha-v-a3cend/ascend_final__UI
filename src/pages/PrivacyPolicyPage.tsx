@@ -117,9 +117,13 @@ export const PrivacyPolicyPage: React.FC = () => {
           </p>
           <div className="mt-3 p-5 rounded-2xl bg-slate-50 border border-slate-200">
             <div className="font-bold text-ink-900">Ascend Business Solutions Pvt. Ltd.</div>
-            <div className="text-xs text-slate-600 mt-1">Attn: Data Protection &amp; Compliance Office</div>
-            <div className="text-xs text-slate-600">T-Hub, Hyderabad Knowledge City, Telangana 500081, India</div>
-            <div className="text-xs text-brand-600 font-semibold mt-2">Email: privacy@a3cend.com</div>
+            <div className="text-xs text-slate-600 mt-1">T-Hub, Hyderabad Knowledge City, Telangana 500081, India</div>
+            <div className="text-xs font-semibold mt-2">
+              Email:{' '}
+              <a href="mailto:info@a3cend.com" className="text-brand-600 hover:underline font-bold">
+                info@a3cend.com
+              </a>
+            </div>
           </div>
         </div>
       </div>

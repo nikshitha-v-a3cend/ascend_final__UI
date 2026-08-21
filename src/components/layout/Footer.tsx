@@ -293,16 +293,16 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-6 border-t border-brand-600/10 flex flex-col items-center gap-3 text-center text-xs text-slate-500 font-medium">
-          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-xs font-semibold text-slate-600">
-            <Link to="/privacy-policy" className="hover:text-brand-600 transition-colors">
+          <div className="flex flex-wrap justify-center items-center text-xs font-semibold text-slate-600">
+            <Link to="/privacy-policy" className="px-3 py-1 hover:text-brand-600 transition-colors whitespace-nowrap">
               Privacy Policy
             </Link>
-            <span>·</span>
-            <Link to="/terms-of-service" className="hover:text-brand-600 transition-colors">
+            <span className="text-slate-300 select-none hidden sm:inline">·</span>
+            <Link to="/terms-of-service" className="px-3 py-1 hover:text-brand-600 transition-colors whitespace-nowrap">
               Terms of Service
             </Link>
-            <span>·</span>
-            <Link to="/cookie-policy" className="hover:text-brand-600 transition-colors">
+            <span className="text-slate-300 select-none hidden sm:inline">·</span>
+            <Link to="/cookie-policy" className="px-3 py-1 hover:text-brand-600 transition-colors whitespace-nowrap">
               Cookie Policy
             </Link>
           </div>
