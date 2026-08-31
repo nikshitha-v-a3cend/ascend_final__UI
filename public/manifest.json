@@ -1,0 +1,23 @@
+{
+  "name": "A3CEND",
+  "short_name": "A3CEND",
+  "description": "AI-Powered Practice & Readiness Platform for Enterprise Capability Building",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A1A",
+  "theme_color": "#6C47FF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

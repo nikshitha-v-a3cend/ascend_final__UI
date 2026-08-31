@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { SEOManager } from '@/seo/SEOManager';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { AnnouncementBanner } from '@/components/layout/AnnouncementBanner';
@@ -58,6 +59,7 @@ function ScrollToTop() {
 export const App: React.FC = () => {
   return (
     <QueryClientProvider client={queryClient}>
+      <SEOManager />
       <ScrollToTop />
       <div className="flex flex-col min-h-screen selection:bg-brand-100 selection:text-brand-600">
         <AnnouncementBanner />

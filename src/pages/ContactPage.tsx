@@ -31,7 +31,7 @@ export const ContactPage: React.FC = () => {
         {/* CENTERED CONTAINER */}
         <div className="relative z-10 max-w-[1320px] w-full mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            
+
             {/* LEFT COLUMN (6 COLS) */}
             <div className="lg:col-span-6 flex flex-col">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/95 border border-brand-600/20 rounded-full shadow-sm w-fit">

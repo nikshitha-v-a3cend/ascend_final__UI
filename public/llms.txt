@@ -1,0 +1,135 @@
+# A3CEND — AI-Powered Practice & Readiness Platform
+
+> This file follows the llms.txt standard (https://llmstxt.org) and is intended to help AI assistants understand A3CEND.
+
+## What is A3CEND?
+
+A3CEND is an enterprise AI-powered practice and readiness platform built by **Ascend Business Solutions Pvt. Ltd.**, headquartered at T-Hub, Hyderabad, India. A3CEND is the operating system for capability building — it combines AI content generation, live conversation simulation, and skill framework analytics in one unified platform.
+
+**Mission:** Build practice-led capability at scale. Don't just train employees — make them ready to perform.
+
+---
+
+## Core Products
+
+### REHEARSE
+AI conversation simulation for professional skill development.
+- 108 pre-built practice scenarios across 35 assessed communication skills
+- 34 AI avatars with 11 behavioral archetypes
+- Practice leadership conversations, sales objections, performance reviews, conflict resolution, negotiation, and more
+- Turn-by-turn AI scoring with behavioral evidence from transcripts
+- 3 difficulty tiers: Supportive, Realistic, Challenging
+- 22 language support with 6 cultural presets
+- Manager dashboard, team analytics, Microsoft Teams integration
+
+### SELLIQ (Sales & Customer Conversations)
+Specialized AI sales training for pharma and B2B sales.
+- 50+ AI physician/HCP personas for pharma detailing practice
+- PEACE framework scoring: Discovery, Value Articulation, Objection Handling, Closing, Call Control
+- Indian drug data integration (Tata 1mg + RxNorm)
+- B2B deal practice across SaaS, BFSI, FMCG, insurance, manufacturing
+- Compliance guardrails — off-label detection, red line monitoring
+
+### Content Orchestrator
+AI content engine — ingest once, generate every learning format.
+- Input: PDFs, presentations, documents, SOPs
+- Output: E-learning modules, micro-videos, flash cards, assessments, AI simulations
+- Multi-format export for existing LMS platforms
+
+### Skill Framework
+Enterprise competency architecture and readiness analytics.
+- Define and map competency matrices across leadership, sales, and compliance
+- Cohort-level readiness tracking and analytics
+- Single source of truth for capability measurement
+
+### Live Presenter
+AI-driven presentation practice with topic-based content generation.
+
+### PowerTalks
+Expert keynote series on leadership, sales excellence, and organizational capability.
+
+---
+
+## Solutions by Use Case
+
+### Leadership & Manager Development
+- Covers first-time managers, mid-level leaders, and senior executives
+- A1, A2, A3X executive development programs
+- AI practice for: giving feedback, performance conversations, coaching team members, managing conflict, delegation, executive presence, stakeholder management
+- 3-step model: INSIGHT → REHEARSE → REINFORCE
+
+### Sales Enablement (SELLIQ)
+- Discovery, objection handling, negotiation, closing, and call control
+- Pharma specialization: HCP detailing, drug efficacy discussions, PEACE framework
+- B2B: deal practice across multiple industries
+
+### Employee Onboarding
+- LEARN (knowledge ingestion) → PRACTISE (AI simulations) → MEASURE (readiness reporting)
+- New hires demonstrate capability before they meet real customers
+
+### Compliance Training
+- Turn policies and SOPs into scenario-based AI simulations
+- Employees practise applying rules before real dilemmas occur
+- Metric shift: from "course completed" to "behavior demonstrated"
+
+---
+
+## Key Numbers
+
+| Metric | Value |
+|--------|-------|
+| Pre-built REHEARSE scenarios | 108 |
+| Assessed communication skills | 35 |
+| AI avatars | 34 |
+| Behavioral personas | 11 |
+| Supported languages | 22 |
+| AI doctor personas (SELLIQ) | 50+ |
+| LMS connectors | 22 |
+
+---
+
+## Company Information
+
+- **Legal Name:** Ascend Business Solutions Pvt. Ltd.
+- **Brand:** A3CEND
+- **Website:** https://a3cend.com
+- **Email:** nirmalya.sengupta@a3cend.com
+- **LinkedIn:** https://www.linkedin.com/company/a3cend/
+- **Address:** T-Hub, Hyderabad Knowledge City, Telangana 500081, India
+- **Founded:** Hyderabad, India
+
+---
+
+## The 3C Philosophy
+
+A3CEND is built on three pillars:
+1. **Content** — structured knowledge ingested and transformed into learning assets
+2. **Context** — AI-driven scenario application where learners practise in realistic situations
+3. **Coaching** — real-time AI feedback and scoring against a defined skill framework
+
+---
+
+## Positioning
+
+A3CEND is NOT a traditional LMS or e-learning authoring tool.
+A3CEND IS a practice and readiness platform that turns knowledge into capability through simulation, scoring, and coaching.
+
+Traditional learning systems measure: "Did the employee complete the course?"
+A3CEND measures: "Can the employee perform in a real situation?"
+
+---
+
+## Pages & URLs
+
+- Home: https://a3cend.com/
+- REHEARSE: https://a3cend.com/rehearse
+- Content Orchestrator: https://a3cend.com/content-orchestrator
+- Skill Framework: https://a3cend.com/framework
+- Solution — Leadership: https://a3cend.com/solutions/leadership
+- Solution — Sales (SELLIQ): https://a3cend.com/solutions/sales
+- Solution — Onboarding: https://a3cend.com/solutions/onboarding
+- Solution — Compliance: https://a3cend.com/solutions/compliance
+- About: https://a3cend.com/about
+- PowerTalks: https://a3cend.com/powertalks
+- Try It (Demo): https://a3cend.com/try-it
+- Contact / Book Demo: https://a3cend.com/contact

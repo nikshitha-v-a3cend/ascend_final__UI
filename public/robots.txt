@@ -1,0 +1,49 @@
+User-agent: *
+Allow: /
+Disallow: /try/live-presenter
+Disallow: /try/simulation
+
+# Sitemap
+Sitemap: https://a3cend.com/sitemap.xml
+
+# ── AI Crawlers — explicit rules (GEO: allow public pages, block demo pages) ──
+
+User-agent: GPTBot
+Allow: /
+Disallow: /try/live-presenter
+Disallow: /try/simulation
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /try/live-presenter
+Disallow: /try/simulation
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /try/live-presenter
+Disallow: /try/simulation
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /try/live-presenter
+Disallow: /try/simulation
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /try/live-presenter
+Disallow: /try/simulation
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /try/live-presenter
+Disallow: /try/simulation
+
+User-agent: Bytespider
+Allow: /
+Disallow: /try/live-presenter
+Disallow: /try/simulation
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /try/live-presenter
+Disallow: /try/simulation
